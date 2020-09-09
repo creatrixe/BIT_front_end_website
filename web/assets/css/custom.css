@@ -321,7 +321,7 @@ body,
 
 .how_works_iphone_bg,
 .hero_phone_bg {
-    background-image: url('../img/how_it_works_bg.png');
+    background-image: url('../img/elements.svg');
     background-position-y: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1107,7 +1107,7 @@ body,
 	width: 100%;
     height: 100%;
     background-color: #fff;
-    z-index: 9;
+    z-index: 1021;
 }
 
 /* Loading Icon */
@@ -1170,4 +1170,18 @@ p {
 
 .main_nav_bar {
     transition: 0.5s;
+}
+
+.size_17_30 {
+    height: 17px;
+    widows: 30px;
+}
+
+.size_1_50 {
+    height: 50px;
+    width: auto;
+}
+
+.w-40px {
+    width: 40px;
 }
