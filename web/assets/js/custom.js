@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    navbar_toggler();
     $(".back_img").hover(function () {
         $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
         $(this).children('.hover_visible').toggleClass("d-block");
@@ -99,6 +100,12 @@ $('a[href*="#"]')
     });
 });
 
+function navbar_toggler() {
+    $('.navbar-toggler').click(function(){
+        $('.main_nav_bar').toggleClass('shadow-lg bg-white');
+    })
+};
+
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     // console.log(scroll);
@@ -135,6 +142,7 @@ $(window).scroll(function() {
         $('.main_nav_bar').addClass('shadow-lg bg-white');
     } else {
         $('.main_nav_bar').removeClass('shadow-lg bg-white');
+        navbar_toggler();
     }
 });
 

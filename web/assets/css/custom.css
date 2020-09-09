@@ -53,6 +53,11 @@ body,
     font-size: calc(32px + (56 - 32) * ((100vw - 300px) / (1920 - 300)));
 }
 
+.heading_3 {
+    /* font-size: 18px; */
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
+}
+
 .font-36 {
     font-size: 36px;
 }
@@ -1184,4 +1189,14 @@ p {
 
 .w-40px {
     width: 40px;
+}
+
+@media (max-width:1310px) {
+    .get_out_section {
+        display: none !important;
+    }
+
+    .get_out_section_mobile {
+        display: block !important;
+    }
 }
