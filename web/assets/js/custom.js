@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    if($(window).width()<=768) {
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+    }
+
     $('.lazy_loading').Lazy({
         // your configuration goes here
         scrollDirection: 'vertical',
@@ -15,7 +19,7 @@ $(document).ready(function () {
             $(".se-pre-con").fadeIn("slow");
         }, 700);
         setTimeout(() => {
-            window.location.assign('/web/business.html')
+            window.location.assign('/business.html')
         }, 3000);
     });
 
@@ -24,7 +28,7 @@ $(document).ready(function () {
             $(".se-pre-con").fadeIn("slow");
         }, 700);
         setTimeout(() => {
-            window.location.assign('/web/index.html')
+            window.location.assign('/index.html')
         }, 3000);
     });
 
@@ -36,8 +40,10 @@ $(document).ready(function () {
         $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
     });
 
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var emailaddressVal = $('#mce-EMAIL').val();
     $('.waiting_list_joined').click(function () {
-        if ($('#mce-EMAIL').val() != "") {
+        if (emailaddressVal != "" && !emailReg.test(emailaddressVal)) {
             $('.waiting_list_joined').addClass('min-width-100p h-100');
             $(".waiting_list_joined").html('Invitation list joined!');
         }
@@ -63,7 +69,7 @@ $(document).ready(function () {
                     // Only prevent default if animation is actually gonna happen
                     event.preventDefault();
                     $('html, body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top-86
                     }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
@@ -176,24 +182,28 @@ $(document).ready(function () {
         $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
         $('.carousel_buttons_1').removeClass('d-none').addClass('d-flex');
         $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section.svg');
+        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section.svg');
     });
 
     $('#headingTwo a').click(function () {
         $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
         $('.carousel_buttons_2').removeClass('d-none').addClass('d-flex');
         $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
+        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
     });
 
     $('#headingThree a').click(function () {
         $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
         $('.carousel_buttons_3').removeClass('d-none').addClass('d-flex');
         $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
+        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
     });
 
     $('#headingFour a').click(function () {
         $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
         $('.carousel_buttons_4').removeClass('d-none').addClass('d-flex');
         $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
+        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
     });
 });
 
@@ -233,10 +243,17 @@ $(window).scroll(function () {
     }
 
     // navbar scroll
-    if ($(window).scrollTop() > 10) {
-        $('.main_nav_bar').addClass('shadow-lg bg-white');
+    if ($(window).scrollTop() > 15) {
+        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
     } else {
         $('.main_nav_bar').removeClass('shadow-lg bg-white');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
+        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
+        if($(window).width()<=768) {
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        }
     }
 });
 
