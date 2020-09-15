@@ -61,16 +61,17 @@
     </div>
   </div>
 
-  <div class="main_nav_bar left-0 position-fixed right-0 sticky-top top-0">
+  <!-- navbar -->
+  <div class="main_nav_bar left-0 position-fixed right-0 sticky-top top-0 z-1021">
     <nav class="navbar top_navbar navbar-expand-md bg-transparent navbar-light col-lg-11 col-xxl-10 mx-auto">
-      <a class="navbar-brand max-width-90px" href="/">
+      <a class="navbar-brand max-width-90px transition-okay" href="/">
         <img src="assets/img/logo.svg" alt="logo" class="img-fluid">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto align-items-center">
           <li class="nav-item mx-15px">
             <a class="nav-link color-light-black font-medium font-18" href="#how_works">How it works</a>
           </li>
@@ -86,12 +87,12 @@
                 For Customers</a>
               <a href="#" class="btn business_btn_toggle text-red px-4">For Businesses</a>
             </div> -->
-            <label class="border-radius-30px d-inline-flex toggle-label">
+            <label class="border-radius-30px d-inline-flex toggle-label business_btn_toggle">
               <input type="checkbox" class="border-radius-30px">
               <span class="back border-radius-30px d-flex align-items-center">
                 <span class="border-radius-30px toggle"></span>
-                <span class="align-items-center border-radius-30px btn d-flex h-100 justify-content-center label on customer_btn_toggle">For Customers</span>
-                <span class="align-items-center d-flex h-100 justify-content-center label off business_btn_toggle">For Businesses</span>
+                <span class="align-items-center border-radius-30px btn d-flex h-100 justify-content-center label on">For Customers</span>
+                <span class="align-items-center d-flex h-100 justify-content-center label off">For Businesses</span>
               </span>
             </label>
           </li>
@@ -99,6 +100,8 @@
       </div>
     </nav>
   </div>
+
+  <!-- moving phone -->
   <div
     class="col-lg-6 d-flex justify-content-lg-center justify-content-end align-items-start test_div position-absolute right-0 left-0 ml-auto">
     <div class="position-sticky top-0 z-1 check_div">
@@ -159,6 +162,7 @@
                 class="form-control form-control-lg bg-white light-black-shadow border-radius-39px Pl-30px pr-110px border-0 h-50px col-11"
                 placeholder="Email address">
               <input type="hidden" name="b_cac8b64d5f6a3757eb15fe7c6_1e0a541756" tabindex="-1" value="">
+              <input type="hidden" value="2" name="group[36812]" id="mce-group[36812]-36812-1">
               <button name="subscribe" id="mc-embedded-subscribe"
                 class="border-0 bg-gradiant-red border-radius-30px col form-control position-absolute right-0 text-center text-white waiting_list_joined"
                 type="submit">Join Waiting List</button>
@@ -278,7 +282,7 @@
   </section>
 
   <!-- key feature section -->
-  <section class="bg-light-gray min-vh-100 position-relative customer_feature_section lazy_loading" id="features">
+  <section class="bg-light-gray min-vh-100 position-relative py-xl-5 customer_feature_section lazy_loading">
     <div class="container-fluid min-vh-100">
       <div id="accordion" class="customer_accordion min-vh-100">
         <div class="row min-vh-100">
@@ -331,16 +335,16 @@
                 <img src="assets/img/carousel_down.svg" alt="up arrow" class="img-fluid size_17_30">
               </a>
             </div>
-            <div>
+            <div id="features">
               <div class="col-lg-10 col-md-8 col-sm-8 col-xxl-8 my-5 mx-auto">
                 <p class="heading_2 font-bold line-height-initial mt-xxl-0">All good things in one place</p>
               </div>
-              <div class="col-10 ml-auto carousel_actions">
+              <div class="carousel_actions col-xl-11 col-xxl-10 ml-auto">
                 <div class="mt-5">
                   <div class="heading_one">
                     <div>
                       <div class="d-flex mt-5 align-items-center">
-                        <div class="col-md-2 col-2 text-center">
+                        <div class="col-md-2 col-2 text-center px-xl-0">
                           <img src="assets/img/key-heart.svg" alt="dashboard icon" class="img-fluid size-70px size-100">
                         </div>
                         <div class="ml-4 mt-3">
@@ -369,7 +373,7 @@
                   <div class="heading_two">
                     <div>
                       <div class="d-flex mt-5 align-items-center">
-                        <div class="col-md-2 col-2 text-center">
+                        <div class="col-md-2 col-2 text-center px-xl-0">
                           <img src="assets/img/key-gift.svg" alt="dashboard icon" class="img-fluid size-70px">
                         </div>
                         <div class="ml-4 mt-3">
@@ -398,7 +402,7 @@
                   <div id="headingTwo">
                     <div class="d-flex mt-5 align-items-center" data-toggle="collapse" data-target="#collapseTwo"
                       aria-expanded="true" aria-controls="collapseTwo" role="button">
-                      <div class="col-md-2 col-2 text-center">
+                      <div class="col-md-2 col-2 text-center px-xl-0">
                         <img src="assets/img/key-gift.svg" alt="dashboard icon" class="img-fluid size-70px">
                       </div>
                       <div class="ml-4 mt-3">
@@ -423,7 +427,7 @@
                   <div class="heading_three">
                     <div>
                       <div class="d-flex mt-5 align-items-center">
-                        <div class="col-md-2 col-2 text-center">
+                        <div class="col-md-2 col-2 text-center px-xl-0">
                           <img src="assets/img/key-privacy.svg" alt="dashboard icon" class="img-fluid size-70px">
                         </div>
                         <div class="ml-4 mt-3">
@@ -451,7 +455,7 @@
                   <div id="headingThree">
                     <div class="d-flex mt-5 align-items-center" data-toggle="collapse" data-target="#collapseThree"
                       aria-expanded="true" aria-controls="collapseThree" role="button">
-                      <div class="col-md-2 col-2 text-center">
+                      <div class="col-md-2 col-2 text-center px-xl-0">
                         <img src="assets/img/key-privacy.svg" alt="dashboard icon" class="img-fluid size-70px">
                       </div>
                       <div class="ml-4 mt-3">
@@ -475,7 +479,7 @@
                   <div class="heading_four">
                     <div>
                       <div class="d-flex mt-5 align-items-center">
-                        <div class="col-md-2 col-2 text-center">
+                        <div class="col-md-2 col-2 text-center px-xl-0">
                           <img src="assets/img/key-security.svg" alt="dashboard icon" class="img-fluid size-70px">
                         </div>
                         <div class="ml-4 mt-3">
@@ -502,7 +506,7 @@
                   <div id="headingFour">
                     <div class="d-flex mt-5 align-items-center" data-toggle="collapse" data-target="#collapseFour"
                       aria-expanded="true" aria-controls="collapseFour" role="button">
-                      <div class="col-md-2 col-2 text-center">
+                      <div class="col-md-2 col-2 text-center px-xl-0">
                         <img src="assets/img/key-security.svg" alt="dashboard icon" class="img-fluid size-70px">
                       </div>
                       <div class="ml-4 mt-3 w-100">
