@@ -1241,10 +1241,10 @@ p {
 }
 
 .waiting_list_joined {
-    -webkit-transition: min-width .4s ease;
-    -moz-transition: min-width .4s ease;
-    -o-transition: min-width .4s ease;
-    transition: min-width .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
 }
 
 .min-width-100p {

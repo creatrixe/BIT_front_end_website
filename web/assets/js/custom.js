@@ -41,9 +41,9 @@ $(document).ready(function () {
     });
 
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    var emailaddressVal = $('#mce-EMAIL').val();
     $('.waiting_list_joined').click(function () {
-        if (emailaddressVal != "" && !emailReg.test(emailaddressVal)) {
+        var emailaddressVal = $('#mce-EMAIL').val();
+        if (emailaddressVal != "" && emailReg.test(emailaddressVal)) {
             $('.waiting_list_joined').addClass('min-width-100p h-100');
             $(".waiting_list_joined").html('Invitation list joined!');
         }
