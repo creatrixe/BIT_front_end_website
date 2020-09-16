@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+    // if ($('div').hasClass('your-class')) {
+    //     $('.your-class').slick({
+    //         arrows: false,
+    //         cssEase: 'fade',
+    //         fade: true,
+    //         infinite: false,
+    //         dots: false,
+    //     });
+    //     $('.your-class').on('wheel', (function (e) {
+    //         e.preventDefault();
+    //         if (e.originalEvent.deltaY < 0) {
+    //             $(this).slick('slickPrev');
+    //         } else {
+    //             $(this).slick('slickNext');
+    //         }
+    //     }));
+    // }
+
     if($(window).width()<=768) {
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
     }
