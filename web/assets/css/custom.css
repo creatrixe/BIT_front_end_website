@@ -1404,7 +1404,7 @@ p {
 }
 
 .toggle-label input[type=checkbox]:checked+.back .toggle {
-    margin-left: 145px;
+    margin-left: 143px;
 }
 
 .toggle-label .label {
