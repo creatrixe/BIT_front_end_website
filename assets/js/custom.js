@@ -1,22 +1,29 @@
 $(document).ready(function () {
 
-    // if ($('div').hasClass('your-class')) {
-    //     $('.your-class').slick({
-    //         arrows: false,
-    //         cssEase: 'fade',
-    //         fade: true,
-    //         infinite: false,
-    //         dots: false,
-    //     });
-    //     $('.your-class').on('wheel', (function (e) {
-    //         e.preventDefault();
-    //         if (e.originalEvent.deltaY < 0) {
-    //             $(this).slick('slickPrev');
-    //         } else {
-    //             $(this).slick('slickNext');
-    //         }
-    //     }));
-    // }
+    if ($('div').hasClass('your-class')) {
+        var item_length = $('.your-class > div.inner_slide').length - 1;
+        $('.your-class').slick({
+            arrows: false,
+            cssEase: 'fade',
+            fade: true,
+            infinite: false,
+            dots: false,
+        });
+        $('.your-class').on('afterChange', function(event, slick, currentSlide) {
+            if (slick.$slides.length-1 == currentSlide) {
+            }
+            else {
+            }
+          });
+        $('.your-class').on('wheel', (function (e) {
+            e.preventDefault();
+            if (e.originalEvent.deltaY < 0) {
+                $(this).slick('slickPrev');
+            } else {
+                $(this).slick('slickNext');
+            }
+        }));
+    };
 
     if($(window).width()<=768) {
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
@@ -412,7 +419,7 @@ $(document).ready(function () {
     if ($('section').hasClass('Desktop_comparison_section')) {
 
 
-        var set_main_top = 425
+        var set_main_top = 285
 
         if (wv < 992) {
             var DesktopsetPosition = "top top";
@@ -472,7 +479,7 @@ $(document).ready(function () {
     }
     if ($('section').hasClass('next_mobile_comparison_section')) {
 
-        var set_middle_top = 470
+        var set_middle_top = 420
 
         if (wv < 992) {
             var next_mobile_comparison_section_Position = "top top";
