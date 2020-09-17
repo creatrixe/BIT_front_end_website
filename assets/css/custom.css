@@ -1462,3 +1462,11 @@ p {
     /* font-size: 20px; */
     font-size: calc(16px + (20 - 16) * ((100vw - 1280px) / (1920 - 1280)));
 }
+
+.swiper-containerr { 
+    height:100vh;
+    /* height:auto;  */
+}
+.swiper-slide {
+    height: auto;
+}
