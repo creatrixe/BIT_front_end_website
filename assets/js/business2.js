@@ -1,12 +1,6 @@
 $(document).ready(function () {
-    window.addEventListener("scroll", function () {
-        $target = $("#swipes");
-        if (window.scrollY > $target[0].offsetTop - 60 && window.scrollY < $target[0].offsetTop) {
-            $('html').addClass('no-scroll');
-        } else {
-            $('html').removeClass('no-scroll');
-        }
-    });
+        // $target = $("#rebranding");
+        $('html').addClass('no-scroll');
     var leftSwiper = new Swiper(".swiper-container-left", {
         direction: "vertical",
         invert: false,
@@ -24,12 +18,16 @@ $(document).ready(function () {
         //   },
     });
     leftSwiper.on('slideChange', function () {
-        if(this.activeIndex < 3) {
+        if(this.activeIndex < 1) {
+            $('.main_nav_bar').removeClass('shadow-lg bg-white');
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
+            $('.main_nav_bar .navbar-brand').removeClass('size-60px');
           }
-        else if(this.activeIndex >= 3 && this.activeIndex < 7) {
+        else if(this.activeIndex >= 1) {
+            $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+            $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
         }
-        else if(this.activeIndex >= 7) {
-          }
       });
     var waiting = false;
     $(window).bind('mousewheel', function (event) {
@@ -38,7 +36,7 @@ $(document).ready(function () {
                 if (waiting == false) {
                     l = leftSwiper.slidePrev();
                     if (l == false) {
-                        $('html').removeClass('no-scroll');
+                        // $('html').removeClass('no-scroll');
                     } else {
                         waiting = true;
                         setTimeout(function () {
@@ -51,7 +49,7 @@ $(document).ready(function () {
                 if (waiting == false) {
                     l = leftSwiper.slideNext();
                     if (l == false) {
-                        $('html').removeClass('no-scroll');
+                        // $('html').removeClass('no-scroll');
                     } else {
                         waiting = true;
                         setTimeout(function () {
@@ -460,7 +458,7 @@ $(document).ready(function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: false,
+                    markers: true,
                     start: next_mobile_comparison_section_Position,
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
                     end: "+=" + section.offsetHeight,

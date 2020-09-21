@@ -1490,7 +1490,7 @@ p {
     align-items: centeR;
 }
 
-#rebranding .panel label {
+/* #rebranding .panel label {
     font-size: 1em;
     line-height: 20px;
     text-align: center;
@@ -1530,7 +1530,7 @@ p {
     color: #6f6966;
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 #rebranding #pinContainer {
     width: 100%;
@@ -1722,9 +1722,9 @@ p {
     position: relative;
 }
 
-#rebranding .swiper-section p {
+/* #rebranding .swiper-section p {
     max-width: 400px;
-}
+} */
 
 #rebranding .sliding-madness {
     position: absolute;
