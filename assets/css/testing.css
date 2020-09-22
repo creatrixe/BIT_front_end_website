@@ -1837,11 +1837,31 @@ html.no-scroll {
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
-
-.main-swiper-container {
+} */
+#pinContainer {
     width: 100%;
     height: 100%;
-  }
+    overflow: hidden;
+}
+.panel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+section.panel.blue {
+    background-color: blue;
+}
+
+section.panel.turqoise {
+    background-color: turquoise;
+}
+section.panel.green {
+    background-color: green;
+}
+
+section.panel.bordeaux {
+    background-color: burlywood;
+}
