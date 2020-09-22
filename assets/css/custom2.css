@@ -1486,3 +1486,12 @@ html.no-scroll {
 .test_div {
     min-height: 200vh;
 }
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.Desktop_comparison_section {
+    height: 655px !important;
+    width: 375px !important;
+}
