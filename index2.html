@@ -745,6 +745,44 @@
                 </div>
               </div>
             </div>
+            <div class="justify-content-center  panel slide-8">
+              <footer class="bg-light-gray footer footer_section min-vh-100 min-vw-100">
+                <div class="container-fluid">
+                    <div class="align-items-center col-lg-10 d-lg-flexx d-none mx-auto py-3">
+                        <div class="text-center text-lg-left">
+                            <img src="assets/img/logo.svg" alt="logo" class="img-fluid max-width-90px">
+                        </div>
+                        <div class="mx-auto my-5 my-lg-0">
+                          <!-- <div class="align-items-center d-flex">
+                            <div class="align-items-center border-radius-30px border-mid-black d-flex mx-auto">
+                              <a href="index.html" class="btn bg-gradiant-red text-white border-0 border-radius-30px m-1">For
+                                Customers</a>
+                              <a href="business.html" class="btn text-red px-4">For Businesses</a>
+                            </div>
+                          </div> -->
+                          <label class="border-radius-30px d-inline-flex toggle-label bg-white">
+                            <input type="checkbox" class="border-radius-30px">
+                            <span class="back border-radius-30px d-flex align-items-center">
+                              <span class="border-radius-30px toggle"></span>
+                              <span class="align-items-center border-radius-30px btn d-flex h-100 justify-content-center label on customer_btn_toggle">For Customers</span>
+                              <span class="align-items-center d-flex h-100 justify-content-center label off business_btn_toggle">For Businesses</span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="text-center text-lg-left">
+                            <a class="color-light-black font-18 font-medium mx-4" href="#how_works">How it works</a>
+                            <a class="color-light-black font-18 font-medium mx-4" href="#features">Features</a>
+                            <a class="color-light-black font-18 font-medium mx-4" href="#brands">Brands</a>
+                        </div>
+                    </div>
+                    <div class="align-items-center col-md-10 d-flex justify-content-center mx-auto py-3" style="height: 13vh;">
+                        <p class="font-12">
+                            © 2020 <span class="text-red">Best in town</span>. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            </div>
             <script>
               $(function () { // wait for document ready
                 // init
@@ -758,17 +796,17 @@
                     ease: Linear.easeNone
                   }) // fade
                   .fromTo(".customer_how_works3", .5, {
-                    alpha: "0"
+                    alpha: "0", delay:2
                   }, {
                     alpha: "1",
                     ease: Linear.easeNone
-                  }) // fade
+                  },"+=.2")
                   .fromTo(".features1", .5, {
-                    y: "100%"
+                    x: "-100%"
                   }, {
-                    y: "0%",
+                    x: "0%",
                     ease: Linear.easeNone
-                  })
+                  },"+=.3")
                   .fromTo(".features2", .5, {
                     alpha: "0"
                   }, {
@@ -788,9 +826,15 @@
                     ease: Linear.easeNone
                   })
                   .fromTo(".brands_section", 1, {
+                    x: "100%"
+                  }, {
+                    x: "0%",
+                    ease: Linear.easeNone
+                  })
+                  .fromTo(".footer_section", 1, {
                     y: "100%"
                   }, {
-                    y: "0%",
+                    y: "90%",
                     ease: Linear.easeNone
                   });
 
@@ -801,7 +845,7 @@
                     duration: "300%"
                   }).on('start', function () {
                     console.log("passed trigger");
-                    $('.test_div').toggleClass('d-none d-flex')
+                    $('.test_div').toggleClass('opacity-0 d-flex')
                   })
                   .setPin("#pinContainer")
                   .setTween(wipeAnimation)
