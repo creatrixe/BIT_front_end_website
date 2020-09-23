@@ -1,88 +1,28 @@
+var progress = 0;
+var tl;
+var second_mobile_on;
+var controller_2;
+var wipeAnimation_2;
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
-// $(document).ready(function () {
-//     window.addEventListener("scroll", function () {
-//         $target = $("#swipes");
-//         if (window.scrollY > $target[0].offsetTop - 60 && window.scrollY < $target[0].offsetTop) {
-//             $('html').addClass('no-scroll');
-//         } else {
-//             $('html').removeClass('no-scroll');
-//         }
-//     });
-//     var leftSwiper = new Swiper(".swiper-container-left", {
-//         direction: "vertical",
-//         invert: false,
-//         allowTouchMove: false,
-//         effect: 'fade',
-//         fadeEffect: {
-//             crossFade: true
-//         },
-//         // pagination: {
-//         //     el: ".swiper-pagination"
-//         //   },
-//         //   navigation: {
-//         //     nextEl: ".swiper-button-next",
-//         //     prevEl: ".swiper-button-prev"
-//         //   },
-//     });
-//     leftSwiper.on('slideChange', function () {
-//         if(this.activeIndex < 3) {
-//           }
-//         else if(this.activeIndex >= 3 && this.activeIndex < 7) {
-//         }
-//         else if(this.activeIndex >= 7) {
-//           }
-//       });
-//     var waiting = false;
-//     $(window).bind('mousewheel', function (event) {
-//         if ($('html').hasClass('no-scroll')) {
-//             if (event.originalEvent.wheelDelta >= 0) {
-//                 if (waiting == false) {
-//                     l = leftSwiper.slidePrev();
-//                     if (l == false) {
-//                         $('html').removeClass('no-scroll');
-//                     } else {
-//                         waiting = true;
-//                         setTimeout(function () {
-//                             waiting = false;
-//                         }, 500);
-//                     }
-//                 }
-//             }
-//             else if (event.originalEvent.wheelDelta < 0) {
-//                 if (waiting == false) {
-//                     l = leftSwiper.slideNext();
-//                     if (l == false) {
-//                         $('html').removeClass('no-scroll');
-//                     } else {
-//                         waiting = true;
-//                         setTimeout(function () {
-//                             waiting = false;
-//                         }, 500);
-//                     }
-//                 }
-//             }
-//         }
-//         if($('.slide-left-1').hasClass('swiper-slide-active')) {
-//             $('.test_div').removeClass('d-flex').addClass('d-none');
-//         }
-//         else if($('.slide-left-0').hasClass('swiper-slide-active')) {
-//             $('.test_div').addClass('d-flex').removeClass('d-none');
-//         } 
-//     });
-//     //   $(document).on('mousewheel', function() {
-//     //     $(document).trigger('mousewheel');
-//     var e = jQuery.Event("DOMMouseScroll", {
-//         // delta: -650
-//     });
 
-//     // trigger an artificial DOMMouseScroll event with delta -650
-//     jQuery(document).trigger(e);
-// });
+  $(window).scroll(function(){
+    if ($(window).scrollTop() > 15) {
+        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
+    } else {
+        $('.main_nav_bar').removeClass('shadow-lg bg-white');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
+        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
+        if($(window).width()<=768) {
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        }
+    }
+  })
 
 $(document).ready(function () {
-
     setTimeout(() => {
         $('div[data-scrollmagic-pin-spacer]').addClass('min-vh-100')
     }, 2000);
@@ -119,14 +59,6 @@ $(document).ready(function () {
         }, 3000);
     });
 
-    $(".back_img").hover(function () {
-        $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
-        $(this).children('.hover_visible').toggleClass("d-block");
-        $('.back_img_2').toggleClass('min-80vh');
-        $('.back_img_2').children('.always_visible').toggleClass("d-none");
-        $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
-    });
-
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     $('.waiting_list_joined').click(function () {
         var emailaddressVal = $('#mce-EMAIL').val();
@@ -137,6 +69,8 @@ $(document).ready(function () {
     });
 
     // START smooth scrolling
+
+
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -174,189 +108,9 @@ $(document).ready(function () {
         });
     // END smooth scrolling
 
-    $('.customer_feature_section .carousel_actions a[data-toggle="collapse"]').click(function () {
-        $('.customer_feature_section .carousel_actions a[data-toggle="collapse"]').removeClass('text-black').addClass('text-mid-black');
-        $('.customer_feature_section .carousel_actions a[data-toggle="collapse"]').parent().parent().parent().find('img').removeClass('size-100');
-        $(this).removeClass('text-mid-black').addClass('text-black');
-        $(this).parent().parent().parent().find('img').addClass('size-100');
-    });
-
-    $('.carousel_buttons_2').removeClass('d-flex').addClass('d-none');
-    $('.carousel_buttons_3').removeClass('d-flex').addClass('d-none');
-    $('.carousel_buttons_4').removeClass('d-flex').addClass('d-none');
-
-    $('.carousel_buttons_1 .up_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_four').find('img').addClass('size-100');
-        $('.heading_one [data-target="#collapseOne"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_four [data-target="#collapseFour"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_1').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_4').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
-    });
-
-    $('.carousel_buttons_1 .down_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_two').find('img').addClass('size-100');
-        $('.heading_one [data-target="#collapseOne"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_two [data-target="#collapseTwo"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_1').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_2').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
-    });
-
-    $('.carousel_buttons_2 .up_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_one').find('img').addClass('size-100');
-        $('.heading_two [data-target="#collapseTwo"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_one [data-target="#collapseOne"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_2').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_1').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section.svg');
-    });
-
-    $('.carousel_buttons_2 .down_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_three').find('img').addClass('size-100');
-        $('.heading_two [data-target="#collapseTwo"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_three [data-target="#collapseThree"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_2').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_3').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
-    });
-
-    $('.carousel_buttons_3 .up_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_two').find('img').addClass('size-100');
-        $('.heading_three [data-target="#collapseThree"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_two [data-target="#collapseTwo"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_3').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_2').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
-    });
-
-    $('.carousel_buttons_3 .down_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_four').find('img').addClass('size-100');
-        $('.heading_three [data-target="#collapseThree"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_four [data-target="#collapseFour"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_3').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_4').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
-    });
-
-    $('.carousel_buttons_4 .up_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_three').find('img').addClass('size-100');
-        $('.heading_four [data-target="#collapseFour"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_three [data-target="#collapseThree"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_4').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_3').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
-    });
-
-    $('.carousel_buttons_4 .down_arrow').click(function () {
-        $('.carousel_actions').find('img').removeClass('size-100');
-        $('.heading_one').find('img').addClass('size-100');
-        $('.heading_four [data-target="#collapseFour"]').removeClass('text-black').addClass('text-mid-black');
-        $('.heading_one [data-target="#collapseOne"]').removeClass('text-mid-black').addClass('text-black');
-        $('.carousel_buttons_4').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_1').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section.svg');
-    });
-
-    $('#headingOne a').click(function () {
-        $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_1').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section.svg');
-        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section.svg');
-    });
-
-    $('#headingTwo a').click(function () {
-        $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_2').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
-        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_2nd_option.svg');
-    });
-
-    $('#headingThree a').click(function () {
-        $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_3').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
-        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_3rd_option.svg');
-    });
-
-    $('#headingFour a').click(function () {
-        $('.carousel_buttons').removeClass('d-flex').addClass('d-none');
-        $('.carousel_buttons_4').removeClass('d-none').addClass('d-flex');
-        $('.next_mobile_comparison_section .afterImage img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
-        $('.how_works_iphone_bg img').attr('src', 'assets/img/mockup/3rd_section_4th_option.svg');
-    });
 });
-
-$(window).scroll(function () {
-    // navbar scroll
-    if ($(window).scrollTop() > 15) {
-        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
-        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
-    } else {
-        $('.main_nav_bar').removeClass('shadow-lg bg-white');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
-        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
-        if ($(window).width() <= 768) {
-            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
-        }
-    }
-});
-
-$(window).scroll(function () {
-    var Bscroll = $(window).scrollTop();
-    // console.log(Bscroll);
-    if (Bscroll <= 850) {
-        $('._1st_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
-        $('._1st_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/ArrowRed.svg');
-        $('._2nd_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
-        // console.log('active');
-    } else if (Bscroll > 850 && Bscroll < 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-black').addClass('text-red');
-        $('._1st_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/arrowBlack.svg');
-        $('._2nd_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/bagRed.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/paper_black.svg');
-        // console.log('active');
-    } else if (Bscroll >= 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/pageRed.svg');
-        // console.log('active');
-    }
-});
-
-// setTimeout(() => {
-//     var TopSection = $('.customer_hero_section');
-//     var WorkSection = $('.customer_how_works');
-//     var cust_feature = $('.customer_feature_section');
-//     // var FeatureSection = $('#features');
-//     var set_height = TopSection.height() + WorkSection.height();
-//     var set_height_next = WorkSection.height() + cust_feature.height() - 50;
-//     $('.test_div').height(set_height);
-//     $('.next_section_mobile').height(set_height_next);
-// }, 1000);
 
 $(document).ready(function () {
-    $(".carousel_buttons a").click(function () {
-        $(".collapse.show").fadeIn(3000); //3000 meant within this ms time it shows
-    });
 
     // main image scroll
 
@@ -407,7 +161,7 @@ $(document).ready(function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: true,
+                    markers: false,
                     start: DesktopsetPosition,
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
                     end: "+=" + section.offsetHeight,
@@ -445,63 +199,101 @@ $(document).ready(function () {
     }
     if ($('section').hasClass('next_mobile_comparison_section')) {
 
-        var set_middle_top = 420
-
-        if (wv < 992) {
-            var next_mobile_comparison_section_Position = "top top";
-        }
-        if (wv > 992 && wv <= 1024) {
-            var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
-        }
-        if (wv > 1024 && wv <= 1280) {
-            var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
-        }
-        if (wv > 1280 && wv <= 1600) {
-            var next_mobile_comparison_section_Position = set_middle_top - 156 + "px center";
-        }
-        if (wv > 1600) {
-            var next_mobile_comparison_section_Position = set_middle_top + "px center";
-        }
-
-        gsap.utils.toArray(".next_mobile_comparison_section").forEach(section => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    markers: false,
-                    start: next_mobile_comparison_section_Position,
-                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: "+=" + section.offsetHeight,
-                    // onUpdate: self => {
-                    //     if(self.progress==1){
-                    //         console.log('complete')
-                    //     }
-                    //     console.log("progress:", self.progress)
-                    // },
-                    scrub: true,
-                    pin: false,
-                    anticipatePin: 1
-                },
-                defaults: {
-                    ease: "none"
-                },
-            });
-            $('.next_mobile_comparison_section .comparisonImage').height(section.offsetHeight)
-            console.log(section.offsetHeight)
-            // animate the container one way...
-            tl.fromTo(section.querySelector(".next_mobile_comparison_section .afterImage"), {
-                    yPercent: 100,
-                    x: 0
+        
+        $(function () { // wait for document ready
+            // init
+            controller_2 = new ScrollMagic.Controller();
+            // define movement of panels
+            wipeAnimation_2 = new TimelineMax()
+              .fromTo(".next_mobile_comparison_section .afterImage", 1, {
+                  y: 100,
+                  x: 0
                 }, {
-                    yPercent: 0
-                })
-                // ...and the image the opposite way (at the same time)
-                .fromTo(section.querySelector(".next_mobile_comparison_section .afterImage img"), {
-                    yPercent: -100,
-                    x: 0
+                    y: 0,
+                ease: Linear.easeNone
+              }) // fade
+              .fromTo(".next_mobile_comparison_section .afterImage img", 1, {
+                  y: -100,
+                  x: 0
                 }, {
-                    yPercent: 0
-                }, 0);
-        });
+                    y: 0,
+                    ease: Linear.easeNone
+                },0);
+
+            // create scene to pin and link animation
+            second_mobile_on = new ScrollMagic.Scene({
+                triggerElement: ".next_mobile_comparison_section",
+                triggerHook: "onLeave",
+                duration: "100%"
+              }).on('start', function () {
+                // console.log("passed trigger");
+                // $('.test_div').toggleClass('opacity-0 d-flex')
+              }).on("end", function () {
+                // $('.last_mobile_section').toggleClass('d-flex')
+                // progress = tl.progress();
+                // tl.kill();
+                // translate();
+              })
+          });
+        
+
+        // var set_middle_top = 420
+
+        // if (wv < 992) {
+        //     var next_mobile_comparison_section_Position = "top top";
+        // }
+        // if (wv > 992 && wv <= 1024) {
+        //     var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
+        // }
+        // if (wv > 1024 && wv <= 1280) {
+        //     var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
+        // }
+        // if (wv > 1280 && wv <= 1600) {
+        //     var next_mobile_comparison_section_Position = set_middle_top - 156 + "px center";
+        // }
+        // if (wv > 1600) {
+        //     var next_mobile_comparison_section_Position = set_middle_top + "px center";
+        // }
+
+        // gsap.utils.toArray(".next_mobile_comparison_section").forEach(section => {
+        //     tl = gsap.timeline({
+        //         scrollTrigger: {
+        //             trigger: section,
+        //             markers: true,
+        //             start: next_mobile_comparison_section_Position,
+        //             // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+        //             end: "+=" + section.offsetHeight,
+        //             // onUpdate: self => {
+        //             //     if(self.progress==1){
+        //             //         console.log('complete')
+        //             //     }
+        //             //     console.log("progress:", self.progress)
+        //             // },
+        //             scrub: true,
+        //             pin: false,
+        //             anticipatePin: 1
+        //         },
+        //         defaults: {
+        //             ease: "none"
+        //         },
+        //     });
+        //     $('.next_mobile_comparison_section .comparisonImage').height(section.offsetHeight)
+        //     console.log(section.offsetHeight)
+        //     // animate the container one way...
+        //     tl.fromTo(section.querySelector(".next_mobile_comparison_section .afterImage"), {
+        //             yPercent: 100,
+        //             x: 0
+        //         }, {
+        //             yPercent: 0
+        //         })
+        //         // ...and the image the opposite way (at the same time)
+        //         .fromTo(section.querySelector(".next_mobile_comparison_section .afterImage img"), {
+        //             yPercent: -100,
+        //             x: 0
+        //         }, {
+        //             yPercent: 0
+        //         }, 0);
+        // });
     }
 
     if ($('section').hasClass('Mobile_comparison_section')) {
@@ -587,7 +379,7 @@ $(document).ready(function () {
 
     //   })(jQuery);
 
-    //   $(window).scroll(functio() {
+    //   $(window).scroll(function() {
 
     //     $(".Desktop_comparison_section").each(function() {
 
