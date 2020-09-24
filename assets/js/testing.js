@@ -205,20 +205,12 @@ $(document).ready(function () {
             controller_2 = new ScrollMagic.Controller();
             // define movement of panels
             wipeAnimation_2 = new TimelineMax()
-              .fromTo(".next_mobile_comparison_section .afterImage", 1, {
-                  y: 100,
-                  x: 0
+              .fromTo(".next_mobile_comparison_section .afterImage img", 1, {
+                  y: -100,
                 }, {
                     y: 0,
                 ease: Linear.easeNone
-              }) // fade
-              .fromTo(".next_mobile_comparison_section .afterImage img", 1, {
-                  y: -100,
-                  x: 0
-                }, {
-                    y: 0,
-                    ease: Linear.easeNone
-                },0);
+              },0);
 
             // create scene to pin and link animation
             second_mobile_on = new ScrollMagic.Scene({

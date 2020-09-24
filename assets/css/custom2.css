@@ -517,6 +517,12 @@ body,
     }
 }
 
+@media (max-width: 1024px) {
+    .business_nav_bar {
+        background-color: white !important;
+    }
+}
+
 @media (min-width: 992px) AND (max-width: 1024px) {
     .how_works_side_img .main_img {
         padding-left: 15%;
@@ -1494,4 +1500,8 @@ html.no-scroll {
 .Desktop_comparison_section {
     height: 655px !important;
     width: 375px !important;
+}
+
+.object-fit-cover {
+    object-fit: cover;
 }
