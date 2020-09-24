@@ -17,6 +17,23 @@ $(document).ready(function () {
         //     prevEl: ".swiper-button-prev"
         //   },
     });
+
+    $('.business_how_works_link').click(function(){
+        leftSwiper.slideTo(1);
+    });
+
+    $('.business_insight_link').click(function(){
+        leftSwiper.slideTo(4);
+    });
+
+    $('.business_feature_link').click(function(){
+        leftSwiper.slideTo(5);
+    });
+
+    $('.business_pricing_link').click(function(){
+        leftSwiper.slideTo(9);
+    });
+
     leftSwiper.on('slideChange', function () {
         if(this.activeIndex < 1) {
             $('.main_nav_bar').removeClass('shadow-lg bg-white');

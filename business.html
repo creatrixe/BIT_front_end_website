@@ -85,8 +85,14 @@
       <a class="navbar-brand max-width-90px" href="/">
         <img src="assets/img/white_logo.svg" alt="logo" class="img-fluid business_logo">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+        aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto align-items-center">
@@ -136,7 +142,7 @@
                         <p class="color-light-black col-md-10 col-xxl-9 px-0">
                             Bring in customers, and keep them coming back for more with the digital punch card.
                         </p>
-                        <form class="form-inline hero_email_joining position-relative col-xl-6 pl-0"
+                        <form class="form-inline hero_email_joining position-relative pl-0 col-md-10 col-xl-8 col-xxl-6"
                           onsubmit="SubForm(); return false;" method="post" id="mc-embedded-subscribe-form"
                           name="mc-embedded-subscribe-form">
                           <input type="email" value="" name="EMAIL" id="mce-EMAIL" required

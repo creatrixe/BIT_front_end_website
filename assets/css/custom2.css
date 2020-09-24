@@ -50,7 +50,7 @@ body,
 
 .heading_2 {
     /* font-size: 56px; */
-    font-size: calc(32px + (56 - 32) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(30px + (56 - 30) * ((100vw - 300px) / (1920 - 300)));
 }
 
 .heading_3 {
@@ -1504,4 +1504,49 @@ html.no-scroll {
 
 .object-fit-cover {
     object-fit: cover;
+}
+
+
+.icon-bar {
+    width: 22px;
+    height: 2px;
+    background-color: #C43438;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler:focus {
+    outline: none;
 }
