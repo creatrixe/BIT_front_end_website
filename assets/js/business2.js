@@ -5,6 +5,10 @@ $(document).ready(function () {
         direction: "vertical",
         invert: false,
         allowTouchMove: true,
+        slidesPerView: 1,
+        virtualTranslate: true,
+        watchSlidesVisibility: true,
+        autoHeight: true,
         effect: 'fade',
         fadeEffect: {
             crossFade: true
@@ -17,6 +21,16 @@ $(document).ready(function () {
         //     prevEl: ".swiper-button-prev"
         //   },
     });
+
+    $('.swiper-container-left input').on('mousedown touchstart MSPointerDown', function(e){
+        e.stopPropagation();
+}); 
+        $('.swiper-container-left button').on('mousedown touchstart MSPointerDown', function(e){
+        e.stopPropagation();
+}); 
+        $('.swiper-container-left textarea').on('mousedown touchstart MSPointerDown', function(e){
+        e.stopPropagation();
+});  
 
     $('.business_how_works_link').click(function(){
         leftSwiper.slideTo(1);

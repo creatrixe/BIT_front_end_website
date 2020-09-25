@@ -58,6 +58,16 @@ body,
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
 }
 
+.text_18_12 {
+    /* font-size: 18px; */
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.text_36_28 {
+    /* font-size: 36px; */
+    font-size: calc(28px + (36 - 28) * ((100vw - 300px) / (1920 - 300)));
+}
+
 .font-36 {
     font-size: 36px;
 }
@@ -500,6 +510,12 @@ body,
 
     .main_nav_bar {
         background-color: white !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .object-fit-md-cover {
+        object-fit: cover;
     }
 }
 
@@ -1549,4 +1565,24 @@ html.no-scroll {
 
 .navbar-toggler:focus {
     outline: none;
+}
+
+/* .swiper-slide.swiper-slide-visible {
+    z-index: 1099 !important;
+} */
+
+.swiper-slide:not(.swiper-slide-visible) {
+/* z-index: 0; */
+/* display: none !important; */
+visibility: hidden;
+}
+
+@media (min-width: 1300px) {
+    .nav_toggler{
+        margin-left: 3rem !important;
+    }
+}
+
+.min-height-85vh {
+    min-height: 85vh;
 }
