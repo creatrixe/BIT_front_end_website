@@ -139,32 +139,31 @@ $(document).ready(function () {
     if ($('section').hasClass('Desktop_comparison_section')) {
 
 
-        var set_main_top = 285;
+        // var set_main_top = 285;
 
-        if (wv < 992) {
-            var DesktopsetPosition = "top top";
-        }
-        if (wv > 992 && wv <= 1024) {
-            var DesktopsetPosition = set_main_top - 60 + "px center";
-        }
-        if (wv > 1024 && wv <= 1280) {
-            var DesktopsetPosition = set_main_top - 70 + "px center";
-        }
-        if (wv > 1280 && wv <= 1600) {
-            var DesktopsetPosition = set_main_top - 60 + "px center";
-        }
-        if (wv > 1600) {
-            var DesktopsetPosition = set_main_top + "px center";
-        }
+        // if (wv < 992) {
+        //     var DesktopsetPosition = "top top";
+        // }
+        // if (wv > 992 && wv <= 1024) {
+        //     var DesktopsetPosition = set_main_top - 60 + "px center";
+        // }
+        // if (wv > 1024 && wv <= 1280) {
+        //     var DesktopsetPosition = set_main_top - 70 + "px center";
+        // }
+        // if (wv > 1280 && wv <= 1600) {
+        //     var DesktopsetPosition = set_main_top - 60 + "px center";
+        // }
+        // if (wv > 1600) {
+        //     var DesktopsetPosition = set_main_top + "px center";
+        // }
 
         gsap.utils.toArray(".Desktop_comparison_section").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: false,
-                    start: DesktopsetPosition,
-                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: "+=" + section.offsetHeight,
+                    markers: true,
+                    start: () => '50px 0px;',
+                    end: () => '550px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
                     //         console.log('complete')
@@ -200,33 +199,33 @@ $(document).ready(function () {
     if ($('section').hasClass('next_mobile_comparison_section')) {
 
         
-        $(function () { // wait for document ready
-            // init
-            controller_2 = new ScrollMagic.Controller();
-            // define movement of panels
-            wipeAnimation_2 = new TimelineMax()
-              .fromTo(".next_mobile_comparison_section .afterImage img", 1, {
-                  y: -100,
-                }, {
-                    y: 0,
-                ease: Linear.easeNone
-              },0);
+        // $(function () { // wait for document ready
+        //     // init
+        //     controller_2 = new ScrollMagic.Controller();
+        //     // define movement of panels
+        //     wipeAnimation_2 = new TimelineMax()
+        //       .fromTo(".next_mobile_comparison_section .afterImage img", 1, {
+        //           y: -100,
+        //         }, {
+        //             y: 0,
+        //         ease: Linear.easeNone
+        //       },0);
 
-            // create scene to pin and link animation
-            second_mobile_on = new ScrollMagic.Scene({
-                triggerElement: ".next_mobile_comparison_section",
-                triggerHook: "onLeave",
-                duration: "100%"
-              }).on('start', function () {
-                // console.log("passed trigger");
-                // $('.test_div').toggleClass('opacity-0 d-flex')
-              }).on("end", function () {
-                // $('.last_mobile_section').toggleClass('d-flex')
-                // progress = tl.progress();
-                // tl.kill();
-                // translate();
-              })
-          });
+        //     // create scene to pin and link animation
+        //     second_mobile_on = new ScrollMagic.Scene({
+        //         triggerElement: ".next_mobile_comparison_section",
+        //         triggerHook: "onLeave",
+        //         duration: "100%"
+        //       }).on('start', function () {
+        //         // console.log("passed trigger");
+        //         // $('.test_div').toggleClass('opacity-0 d-flex')
+        //       }).on("end", function () {
+        //         // $('.last_mobile_section').toggleClass('d-flex')
+        //         // progress = tl.progress();
+        //         // tl.kill();
+        //         // translate();
+        //       })
+        //   });
         
 
         // var set_middle_top = 420
@@ -247,45 +246,45 @@ $(document).ready(function () {
         //     var next_mobile_comparison_section_Position = set_middle_top + "px center";
         // }
 
-        // gsap.utils.toArray(".next_mobile_comparison_section").forEach(section => {
-        //     tl = gsap.timeline({
-        //         scrollTrigger: {
-        //             trigger: section,
-        //             markers: true,
-        //             start: next_mobile_comparison_section_Position,
-        //             // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-        //             end: "+=" + section.offsetHeight,
-        //             // onUpdate: self => {
-        //             //     if(self.progress==1){
-        //             //         console.log('complete')
-        //             //     }
-        //             //     console.log("progress:", self.progress)
-        //             // },
-        //             scrub: true,
-        //             pin: false,
-        //             anticipatePin: 1
-        //         },
-        //         defaults: {
-        //             ease: "none"
-        //         },
-        //     });
-        //     $('.next_mobile_comparison_section .comparisonImage').height(section.offsetHeight)
-        //     console.log(section.offsetHeight)
-        //     // animate the container one way...
-        //     tl.fromTo(section.querySelector(".next_mobile_comparison_section .afterImage"), {
-        //             yPercent: 100,
-        //             x: 0
-        //         }, {
-        //             yPercent: 0
-        //         })
-        //         // ...and the image the opposite way (at the same time)
-        //         .fromTo(section.querySelector(".next_mobile_comparison_section .afterImage img"), {
-        //             yPercent: -100,
-        //             x: 0
-        //         }, {
-        //             yPercent: 0
-        //         }, 0);
-        // });
+        gsap.utils.toArray(".next_mobile_comparison_section").forEach(section => {
+            tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    markers: false,
+                    start: "0px 0px",
+                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+                    end: "500px 0px",
+                    onUpdate: self => {
+                        // if(self.progress==1){
+                        //     console.log('complete')
+                        // }
+                        console.log("progress:", self.progress)
+                    },
+                    scrub: true,
+                    pin: false,
+                    anticipatePin: 1
+                },
+                defaults: {
+                    ease: "none"
+                },
+            });
+            $('.next_mobile_comparison_section .comparisonImage').height(section.offsetHeight)
+            console.log(section.offsetHeight)
+            // animate the container one way...
+            tl.fromTo(section.querySelector(".next_mobile_comparison_section .afterImage"), {
+                    yPercent: 100,
+                    x: 0
+                }, {
+                    yPercent: 0
+                })
+                // ...and the image the opposite way (at the same time)
+                .fromTo(section.querySelector(".next_mobile_comparison_section .afterImage img"), {
+                    yPercent: -100,
+                    x: 0
+                }, {
+                    yPercent: 0
+                }, 0);
+        });
     }
 
     if ($('section').hasClass('Mobile_comparison_section')) {
