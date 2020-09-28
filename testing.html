@@ -294,10 +294,10 @@
         id="how_works2">
         <!-- <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
-  </div> -->
-        <!-- <div class="red_border position-absolute right-0 bottom-0 col-md-6 mx-auto text-danger">
-    <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
-  </div> -->
+    </div> -->
+          <!-- <div class="red_border position-absolute right-0 bottom-0 col-md-6 mx-auto text-danger">
+      <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
+    </div> -->
         <div class="container-fluid h-100 py-5">
           <div class="position-relative">
             <img src="assets/img/redCircle.svg" class="redCircle" />
@@ -446,13 +446,15 @@
             alpha: "0"
           }, {
             alpha: "1",
-            ease: Linear.easeNone
+            ease: Linear.easeNone,
+            delay: 1
           }) // fade
           .fromTo(".customer_how_works3", .5, {
             alpha: "0", delay:2
           }, {
             alpha: "1",
-            ease: Linear.easeNone
+            ease: Linear.easeNone,
+
           },"+=.2");
 
         // create scene to pin and link animation
@@ -495,10 +497,10 @@
       //     observer.observe(targetNode, observerConfig);
     </script>
   </div>
-  <div class="col-lg-6 min-vh-100 ml-auto check_opacity opacity-0" id="check_opacity" style="margin-top: -940px;">
+  <div class="col-lg-6 ml-auto check_opacity opacity-0" id="check_opacity" >
     <div
       class="last_mobile_section justify-content-lg-center justify-content-end position-relative align-items-start ml-auto">
-      <div class="next_section_mobile position-absolute right-0 left-0  min min-200vh">
+      <div style="margin-top: -940px;min-height: 1890px;" class="next_section_mobile position-absolute right-0 left-0  min ">
         <div class="position-sticky top-0 z-1">
           <div class="align-items-center justify-content-center d-flex min-vh-100">
             <section class="comparisonSection next_mobile_comparison_section d-none d-lg-block">
@@ -872,7 +874,7 @@
         </div>
       </div>
     </section>
-  
+
     <footer class="bg-light-gray footer footer_section min-vw-100">
       <div class="container-fluid">
           <div class="align-items-center col-lg-10 d-lg-flexx d-none mx-auto py-3">
@@ -909,7 +911,7 @@
           </div>
       </div>
   </footer>
-  
+
 </body>
 
 </html>
