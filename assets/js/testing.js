@@ -161,7 +161,7 @@ $(document).ready(function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: true,
+                    markers: false,
                     start: () => '50px 0px;',
                     end: () => '550px 0px',
                     // onUpdate: self => {
@@ -250,7 +250,7 @@ $(document).ready(function () {
             tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: false,
+                    markers: true,
                     start: "0px 0px",
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
                     end: "500px 0px",

@@ -158,9 +158,9 @@
   </div>
 
   <!-- hero section -->
-  <section class="hero_section customer_hero_section position-relative lazy_loading">
-    <div class="container-fluid height-945px">
-      <div class="row pt-40p height-945px">
+  <section class="hero_section height-945px customer_hero_section position-relative lazy_loading">
+    <div class="container-fluid h-100">
+      <div class="row pt-40p h-100">
         <div class="col-lg-6 col-md-10 mobile-min-50vh d-flex justify-content-center align-items-center">
 
           <div class="col-xxl-8 col-lg-10">
@@ -278,7 +278,7 @@
             </div>
             <div
               class="col-lg-6 d-flex ml-lg-auto mr-lg-0 mr-xl-5 mx-auto mx-xl-auto mx-xxl-auto justify-content-center align-items-center">
-              <img src="assets/img/mockup/how_works.svg" alt="mobile mockup" class="img-fluid iphone-images invisible">
+              <img src="assets/img/mockup/how_works.svg" alt="mobile mockup" class="img-fluid iphone-images invisible section_2_img">
             </div>
           </div>
         </div>
@@ -465,6 +465,7 @@
           }).on('start', function () {
             // console.log("passed trigger");
             $('.test_div').toggleClass('opacity-0 d-flex')
+            $('.section_2_img').toggleClass('invisible')
           }).on("end", function (event) {
             $('.check_opacity').toggleClass('opacity-0')
             $('.how_works_3rd').toggleClass('opacity-0')
