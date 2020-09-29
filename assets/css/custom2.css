@@ -292,12 +292,12 @@ body,
     min-height: 60vh;
 }
 
-.back_img:hover {
+/* .back_img:hover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 80vh;
-}
+} */
 
 /* .back_img_1:hover {
     background-image: url('../img/mockup/b2.png');
