@@ -480,7 +480,7 @@ body,
 
 @media (max-width:768px) {
     .navbar-brand.max-width-90px {
-        max-width: 70px !important;
+        max-width: 60px !important;
     }
 
     .navbar-brand.size-60px {
