@@ -479,6 +479,15 @@ body,
 }
 
 @media (max-width:768px) {
+    .navbar-brand.max-width-90px {
+        max-width: 70px !important;
+    }
+
+    .navbar-brand.size-60px {
+        max-height: 60px !important;
+        max-width: 50px !important;
+    }
+
     .hero_text_area p.font-60 {
         font-size: 50px !important;
     }
