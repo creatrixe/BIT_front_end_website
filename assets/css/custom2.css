@@ -1601,3 +1601,7 @@ html.no-scroll {
 .min-height-85vh {
     min-height: 85vh;
 }
+
+.m-w-70p {
+    max-width: 70%;
+}
