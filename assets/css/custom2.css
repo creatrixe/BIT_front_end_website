@@ -1446,6 +1446,7 @@ p {
 
 .toggle-label .label.off {
     right: 0px;
+    padding-right: calc(.25rem + 3px) !important;
 }
 
 .toggle-label input[type=checkbox]+.back .label.off,
