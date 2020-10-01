@@ -436,6 +436,11 @@ body,
     .pt-40p {
         padding-top: 40%;
     }
+
+    .max-width-md-80p {
+        max-width: 80%;
+    }
+    
 }
 
 @media (max-width:787px) {
