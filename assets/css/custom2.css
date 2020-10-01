@@ -1,18 +1,18 @@
 body,
 .font-regular {
-    font-family: 'ITCAvantGardeStdBk-Book';
+    font-family: 'ITCAvantGardeStd-BkObl';
 }
 
 .font-bold {
-    font-family: 'ITCAvantGardeStdBk-Bold';
+    font-family: 'ITCAvantGardeStd-BoldObl';
 }
 
 .font-medium {
-    font-family: 'ITCAvantGardeStdBk-Medium';
+    font-family: 'ITCAvantGardeStd-MdObl';
 }
 
 .font-demi {
-    font-family: 'ITCAvantGardeStdBk-Demi';
+    font-family: 'ITCAvantGardeStd-DemiObl';
 }
 
 .z-1 {
