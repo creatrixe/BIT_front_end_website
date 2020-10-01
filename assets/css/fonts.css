@@ -1,43 +1,27 @@
 @font-face {
-    font-family: 'ITCAvantGardeStd-BkObl';
-    src: url('../fonts/ITCAvantGardeStd-BkObl.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ITCAvantGardeStd-BkObl.otf') format('opentype'),
-    url('../fonts/ITCAvantGardeStd-BkObl.woff') format('woff'),
-    url('../fonts/ITCAvantGardeStd-BkObl.ttf') format('truetype'),
-    url('../fonts/ITCAvantGardeStd-BkObl.svg#ITCAvantGardeStd-BkObl') format('svg');
+    font-family: 'ITCAvantGardeStdBk';
+    src: url('../fonts/ITCAvantGardeStdBk.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStd-BoldObl';
-    src: url('../fonts/ITCAvantGardeStd-BoldObl.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ITCAvantGardeStd-BoldObl.otf') format('opentype'),
-    url('../fonts/ITCAvantGardeStd-BoldObl.woff') format('woff'),
-    url('../fonts/ITCAvantGardeStd-BoldObl.ttf') format('truetype'),
-    url('../fonts/ITCAvantGardeStd-BoldObl.svg#ITCAvantGardeStd-BoldObl') format('svg');
+    font-family: 'ITCAvantGardeStdBold';
+    src: url('../fonts/ITCAvantGardeStdBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStd-DemiObl';
-    src: url('../fonts/ITCAvantGardeStd-DemiObl.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ITCAvantGardeStd-DemiObl.otf') format('opentype'),
-    url('../fonts/ITCAvantGardeStd-DemiObl.woff') format('woff'),
-    url('../fonts/ITCAvantGardeStd-DemiObl.ttf') format('truetype'),
-    url('../fonts/ITCAvantGardeStd-DemiObl.svg#ITCAvantGardeStd-DemiObl') format('svg');
+    font-family: 'ITCAvantGardeStdDemi';
+    src: url('../fonts/ITCAvantGardeStdDemi.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStd-MdObl';
-    src: url('../fonts/ITCAvantGardeStd-MdObl.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ITCAvantGardeStd-MdObl.otf') format('opentype'),
-    url('../fonts/ITCAvantGardeStd-MdObl.woff') format('woff'),
-    url('../fonts/ITCAvantGardeStd-MdObl.ttf') format('truetype'),
-    url('../fonts/ITCAvantGardeStd-MdObl.svg#ITCAvantGardeStd-MdObl') format('svg');
+    font-family: 'ITCAvantGardeStdMd';
+    src: url('../fonts/ITCAvantGardeStdMd.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
