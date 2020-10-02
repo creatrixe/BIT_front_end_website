@@ -1614,3 +1614,44 @@ html.no-scroll {
 .height-44px {
     height: 44px;
 }
+
+@media (max-width:1279px) and (min-width: 1023px) {
+    .core-min-height {
+        /* min-height: 250px; */
+        min-height: calc(220px + (250 - 220) * ((100vw - 1023px) / (1279 - 1023))) !important;
+    }
+
+    .core_heading_h3 {
+        /* font-size: 24px; */
+        font-size: calc(20px + (24 - 20) * ((100vw - 1023px) / (1279 - 1023))) !important;
+    }
+
+    .core_heading_h5 {
+        /* font-size: 18px; */
+        font-size: calc(14px + (16 - 14) * ((100vw - 1023px) / (1279 - 1023))) !important;
+    }
+
+    .height-100px {
+        /* height: 70px; */
+        height: calc(60px + (70 - 60) * ((100vw - 1023px) / (1279 - 1023))) !important;
+    }
+
+    #features .mt-30p {
+        margin-top: 20% !important;
+    }
+
+    .how_works_container .heading_2 {
+        /* font-size: 56px; */
+        font-size: calc(30px + (45 - 40) * ((100vw - 300px) / (1920 - 300)));
+    }
+
+    .slide-left-9 .pricing_tag {
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 1367px) and (min-height: 769px) {
+    #pricing .align-items-xl-end.align-items-xxl-center.align-items-center {
+        align-items: center !important;
+    }
+}
