@@ -1666,4 +1666,7 @@ html.no-scroll {
     #pricing .d-flex.justify-content-center.align-items-center.pb-3.pb-sm-0.d-flex.justify-content-center.align-items-center.pb-3.pb-sm-0 {
         align-items: flex-end !important;
     }
+    .min-height-iphone-85vh {
+        min-height: 85vh;
+    }
 }
