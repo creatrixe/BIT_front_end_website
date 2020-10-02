@@ -1498,16 +1498,17 @@ html.no-scroll {
 } */
 
 .height-945px {
-    height: 945px;
+    /* height: 945px; */
+    height: calc(625px + (945 - 625) * ((100vw - 1024px) / (1920 - 1024)));
 }
 
 
 @media (max-width:1366px) {
-    .height-945px {
+    /* .height-945px {
         height: 625px !important;
     }
 
     .test_div {
         height: 1250px;
-    }
+    } */
 }
