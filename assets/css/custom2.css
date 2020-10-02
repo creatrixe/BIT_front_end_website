@@ -1655,3 +1655,9 @@ html.no-scroll {
         align-items: center !important;
     }
 }
+
+@media (max-width: 1441px) and (min-height: 769px) {
+    #pricing .align-items-xl-end.align-items-xxl-center.align-items-center {
+        align-items: center !important;
+    }
+}
