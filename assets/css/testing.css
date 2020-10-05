@@ -1510,13 +1510,23 @@ html.no-scroll {
     height: 400px;
 }
 
-@media (max-width:1400px) and (min-width:1020px) {
+@media (max-width:1400px) and (min-width:992px) {
     .height-945px {
         height: 625px !important;
     }
 
     .test_div {
         height: 1250px;
+    }
+
+    .height-760px {
+        height: 760px;
+    }
+}
+
+@media (max-width:991px) {
+    .height-945px {
+        height: 812px !important;
     }
 
     .height-760px {
