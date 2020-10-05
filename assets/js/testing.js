@@ -162,8 +162,8 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: true,
-                    start: () => '50px 10px;',
-                    end: () => '525px 0px',
+                    start: () => '0px 0px;',
+                    end: () => '550px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
                     //         console.log('complete')
