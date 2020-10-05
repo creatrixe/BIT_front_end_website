@@ -162,8 +162,8 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: true,
-                    start: () => '50px 0px;',
-                    end: () => '550px 0px',
+                    start: () => '50px 10px;',
+                    end: () => '525px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
                     //         console.log('complete')
@@ -251,7 +251,7 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: false,
-                    start: "0px 0px",
+                    start: "0px 10px",
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
                     end: "500px 0px",
                     onUpdate: self => {
@@ -479,11 +479,10 @@ function loading() {
         setTimeout(function () {
             $('.loader span').html(num + '%');
 
-            if (num == 100) {
-                loading();
-            }
+            // if (num == 100) {
+                // loading();
+            // }
             num++;
-        }, i * 120);
+        }, i * 240);
     };
-
 }

@@ -144,13 +144,13 @@ $(document).ready(function () {
         }, 3000);
     });
 
-    $(".back_img").hover(function () {
-        $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
-        $(this).children('.hover_visible').toggleClass("d-block");
-        $('.back_img_2').toggleClass('min-80vh');
-        $('.back_img_2').children('.always_visible').toggleClass("d-none");
-        $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
-    });
+    // $(".back_img").hover(function () {
+    //     $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
+    //     $(this).children('.hover_visible').toggleClass("d-block");
+    //     $('.back_img_2').toggleClass('min-80vh');
+    //     $('.back_img_2').children('.always_visible').toggleClass("d-none");
+    //     $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
+    // });
 
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     $('.waiting_list_joined').click(function () {
@@ -721,11 +721,10 @@ function loading() {
         setTimeout(function () {
             $('.loader span').html(num + '%');
 
-            if (num == 100) {
-                loading();
-            }
+            // if (num == 100) {
+                // loading();
+            // }
             num++;
-        }, i * 120);
+        }, i * 240);
     };
-
 }

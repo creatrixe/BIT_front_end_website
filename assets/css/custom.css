@@ -1,18 +1,18 @@
 body,
 .font-regular {
-    font-family: 'ITCAvantGardeStdBk-Book';
+    font-family: 'ITCAvantGardeStdBk';
 }
 
 .font-bold {
-    font-family: 'ITCAvantGardeStdBk-Bold';
+    font-family: 'ITCAvantGardeStdBold';
 }
 
 .font-medium {
-    font-family: 'ITCAvantGardeStdBk-Medium';
+    font-family: 'ITCAvantGardeStdMd';
 }
 
 .font-demi {
-    font-family: 'ITCAvantGardeStdBk-Demi';
+    font-family: 'ITCAvantGardeStdDemi';
 }
 
 .z-1 {
@@ -1299,7 +1299,7 @@ p {
     font-size: 40px;
     text-align: center;
     transform-origin: bottom center;
-    animation: 3s rotate infinite;
+    animation: 4s rotate infinite;
     opacity: 0;
 }
 

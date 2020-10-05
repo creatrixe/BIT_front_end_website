@@ -847,11 +847,10 @@ function loading() {
         setTimeout(function () {
             $('.loader span').html(num + '%');
 
-            if (num == 100) {
-                loading();
-            }
+            // if (num == 100) {
+                // loading();
+            // }
             num++;
-        }, i * 120);
+        }, i * 240);
     };
-
 }
