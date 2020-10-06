@@ -10,7 +10,7 @@ $(document).ready(function () {
       // define movement of panels
       var wipeAnimation = new TimelineMax()
 
-        .fromTo("#how_works3", .5, {
+        .fromTo("#how_works2", .5, {
           alpha: "0",
 
         }, {
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
           ease: Linear.easeNone,
         },"+=.2")
-        .fromTo("#how_works4", .5, {
+        .fromTo("#how_works3", .5, {
           alpha: "0"
         }, {
           alpha: "1",

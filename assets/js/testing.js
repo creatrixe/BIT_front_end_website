@@ -134,7 +134,7 @@ $(document).ready(function () {
     }
 
     //   image scroll js
-    var wv = $(window).width();
+    // var wv = $(window).width();
 
     if ($('section').hasClass('Desktop_comparison_section')) {
 
@@ -162,8 +162,9 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: true,
-                    start: () => '0px 0px;',
-                    end: () => '550px 0px',
+                    start: () => '50px 20px',
+                    end: () => section.offsetHeight+'top',
+                    // end: () => '550px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
                     //         console.log('complete')
@@ -178,8 +179,9 @@ $(document).ready(function () {
                     ease: "none"
                 },
             });
+            console.log(section.offsetHeight);
             $('.Desktop_comparison_section .comparisonImage').height(section.offsetHeight)
-            console.log(section.offsetHeight)
+            // console.log(section.offsetHeight)
             // animate the container one way...
             tl.fromTo(section.querySelector(".Desktop_comparison_section .afterImage"), {
                     yPercent: 100,
@@ -258,7 +260,7 @@ $(document).ready(function () {
                         // if(self.progress==1){
                         //     console.log('complete')
                         // }
-                        console.log("progress:", self.progress)
+                        // console.log("progress:", self.progress)
                     },
                     scrub: true,
                     pin: false,
@@ -269,7 +271,7 @@ $(document).ready(function () {
                 },
             });
             $('.next_mobile_comparison_section .comparisonImage').height(section.offsetHeight)
-            console.log(section.offsetHeight)
+            // console.log(section.offsetHeight)
             // animate the container one way...
             tl.fromTo(section.querySelector(".next_mobile_comparison_section .afterImage"), {
                     yPercent: 100,
@@ -305,7 +307,7 @@ $(document).ready(function () {
                 }
             });
             $('.Mobile_comparison_section .comparisonImage').height(section.offsetHeight)
-            console.log(section.offsetHeight)
+            // console.log(section.offsetHeight)
             // animate the container one way...
             tl.fromTo(section.querySelector(".Mobile_comparison_section .afterImage"), {
                     yPercent: 100,
