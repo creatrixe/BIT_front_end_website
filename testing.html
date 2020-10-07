@@ -144,7 +144,7 @@
     class="col-lg-6 d-flex justify-content-lg-center justify-content-end align-items-start test_div position-absolute right-0 left-0 ml-auto">
     <div class="position-sticky top-0 z-1 check_div">
       <div class="align-items-end d-flex ml-lg-auto mr-lg-0 mr-xl-5 mx-auto mx-xl-auto mx-xxl-auto height-760px">
-        <section class="comparisonSection Desktop_comparison_section d-none mb-5 d-lg-block">
+        <section class="comparisonSection Desktop_comparison_section d-none mb-5 mb-lg-0 mb-xl-5 d-lg-block">
           <div class="comparisonImage beforeImage">
             <img src="assets/img/mockup/hero_phone.svg" alt="mobile mockup" class="img-fluid _hero_section_img">
           </div>
@@ -158,7 +158,7 @@
   </div>
 
   <!-- hero section -->
-  <section class="hero_section height-945px customer_hero_section position-relative lazy_loading">
+  <section class="hero_section height-970px customer_hero_section position-relative lazy_loading">
     <div class="container-fluid h-100">
       <div class="row pt-40p h-100 h-sm-auto">
         <div class="col-lg-6 col-md-10  d-flex justify-content-center align-items-lg-center">
@@ -183,11 +183,11 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-6 mobile_view_image hero_phone_bg position-relative">
+        <div class="col-lg-6 mobile_view_image hero_phone_bg position-relative d-none">
           <!-- <img src="assets/img/mockup/hero_mobile_mockup.png" alt="hero section image" class="img-fluid hero_Mobile_img h-100"> -->
           <div class="mobile_1st_section position-absolute d-lg-none left-0 right-0">
-            <div class="position-sticky top-0 z-1">
-              <div class="align-items-center d-flex justify-content-center height-760px mx-auto">
+            <div class="position-sticky top-0 z-1 pt-86px">
+              <div class="align-items-center d-flex justify-content-center mx-auto">
                 <section class="comparisonSection Mobile_comparison_section">
                   <div class="comparisonImage beforeImage">
                     <img src="assets/img/mockup/hero_phone.svg" alt="mobile mockup"
@@ -206,20 +206,59 @@
     </div>
   </section>
 
+  <section class="mobile_only_section position-relative d-lg-none" style="margin-top: -50vh;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6 min-vh-100">
+          <div class="col mobile_view_image hero_phone_bg position-relative">
+            <!-- <img src="assets/img/mockup/hero_mobile_mockup.png" alt="hero section image" class="img-fluid hero_Mobile_img h-100"> -->
+            <div class="mobile_1st_section position-absolute d-lg-none left-0 right-0 min-200vh">
+              <div class="position-sticky top-0 z-1 pt-86px">
+                <div class="align-items-center d-flex justify-content-center mx-auto">
+                  <section class="comparisonSection my-5 Mobile_comparison_section">
+                    <div class="comparisonImage beforeImage">
+                      <img src="assets/img/mockup/hero_phone.svg" alt="mobile mockup"
+                        class="img-fluid _hero_section_img iphone-images">
+                    </div>
+                    <div class="comparisonImage afterImage">
+                      <img src="assets/img/mockup/how_works.svg" alt="mobile mockup"
+                        class="img-fluid _works_section_img iphone-images">
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 bg-gradiant-black min-vh-100 position-relative">
+          <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
+            <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
+          </div>
+          <div class="position-absolute d-none">
+            <img src="assets/img/redCircle.svg" class="redCircle" />
+          </div>
+          <div class="position-absolute top-0 bottom-0 left-0 right-0">
+            <img src="assets/img/elements.svg" class="howItWorksElements d-block d-lg-none bottom-0 top-0" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Swiper section -->
   <div id="pinContainer" class="height-100vh">
     <div class="justify-content-center  panel slide-0">
       <div
-        class="how-it-works customer_how_works customer_how_works1 bg-gradiant-black height-945px min-vw-100 position-relative lazy_loading"
+        class="how-it-works customer_how_works customer_how_works1 bg-gradiant-black height-970px min-vw-100 position-relative lazy_loading"
         id="how_works1">
-        <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
+        <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger d-none d-lg-block">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
   </div>
         <!-- <div class="red_border position-absolute right-0 bottom-0 col-md-6 mx-auto text-danger">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
   </div> -->
-        <div class="container-fluid py-5 h-100">
-          <div class="position-relative">
+        <div class="container-fluid h-100">
+          <div class="position-relative d-none d-lg-block">
             <img src="assets/img/redCircle.svg" class="redCircle" />
           </div>
 
@@ -284,13 +323,13 @@
         </div>
 
         <div class="position-relative">
-          <img src="assets/img/elements.svg" class="howItWorksElements" />
+          <img src="assets/img/elements.svg" class="howItWorksElements d-none d-lg-block" />
         </div>
       </div>
     </div>
     <div class="justify-content-center  panel slide-1">
       <div
-        class="how-it-works customer_how_works customer_how_works2 bg-gradiant-black height-945px min-vw-100 position-relative lazy_loading"
+        class="how-it-works customer_how_works customer_how_works2 bg-gradiant-black height-970px min-vw-100 position-relative lazy_loading"
         id="how_works2">
         <!-- <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
@@ -299,7 +338,7 @@
       <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
     </div> -->
         <div class="container-fluid h-100 py-5">
-          <div class="position-relative">
+          <div class="position-relative d-none d-lg-block">
             <img src="assets/img/redCircle.svg" class="redCircle" />
           </div>
 
@@ -358,22 +397,22 @@
         </div>
 
         <div class="position-relative">
-          <img src="assets/img/elements.svg" class="howItWorksElements" />
+          <img src="assets/img/elements.svg" class="howItWorksElements d-none d-lg-block" />
         </div>
       </div>
     </div>
     <div class="justify-content-center  panel slide-2">
       <div
-        class="how-it-works customer_how_works customer_how_works3 bg-gradiant-black height-945px min-vw-100 position-relative lazy_loading"
+        class="how-it-works customer_how_works customer_how_works3 bg-gradiant-black height-970px min-vw-100 position-relative lazy_loading"
         id="how_works_3">
         <!-- <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
   </div> -->
-        <div class="red_border position-absolute right-0 bottom-0 col-md-6 mx-auto text-danger">
+        <div class="red_border position-absolute right-0 bottom-0 col-md-6 mx-auto text-danger d-none d-lg-block">
     <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg mb-xxl-2"></span>
   </div>
-        <div class="container-fluid py-5 h-100">
-          <div class="position-relative">
+        <div class="container-fluid h-100">
+          <div class="position-relative d-none d-lg-block">
             <img src="assets/img/redCircle.svg" class="redCircle" />
           </div>
 
@@ -432,7 +471,7 @@
         </div>
 
         <div class="position-relative">
-          <img src="assets/img/elements.svg" class="howItWorksElements" />
+          <img src="assets/img/elements.svg" class="howItWorksElements d-none d-lg-block" />
         </div>
       </div>
     </div>
@@ -503,8 +542,8 @@
       class="last_mobile_section justify-content-lg-center justify-content-end position-relative align-items-start ml-auto">
       <div style="margin-top: -940px;min-height: 1890px;" class="next_section_mobile position-absolute right-0 left-0  min ">
         <div class="position-sticky top-0 z-1">
-          <div class="align-items-center justify-content-center d-flex height-945px">
-            <section class="comparisonSection next_mobile_comparison_section d-none d-lg-block">
+          <div class="align-items-center justify-content-center d-flex height-970px">
+            <section class="comparisonSection next_mobile_comparison_section d-none d-lg-block mt-lg-auto mt-xl-0">
               <div class="comparisonImage beforeImage">
                 <img src="assets/img/mockup/how_works_3.svg" alt="mobile mockup" class="img-fluid">
               </div>
@@ -520,7 +559,7 @@
   <div id="pinContainer2" class="height-100vh">
     <div class="justify-content-center  panel slide-3">
       <div
-        class="bg-light-gray height-945px position-relative py-xl-5 customer_feature_section features1 lazy_loading">
+        class="bg-light-gray height-970px position-relative py-xl-5 customer_feature_section features1 lazy_loading">
         <div class="container-fluid h-100 min-vw-100">
           <div class="row h-100">
             <div class="col-lg-6 d-flex justify-content-center align-self-center">
@@ -571,7 +610,7 @@
     </div>
     <div class="justify-content-center  panel slide-4">
       <div
-        class="bg-light-gray height-945px position-relative py-xl-5 customer_feature_section features2 lazy_loading">
+        class="bg-light-gray height-970px position-relative py-xl-5 customer_feature_section features2 lazy_loading">
         <div class="container-fluid h-100 min-vw-100">
           <div class="row h-100">
             <div class="col-lg-6 d-flex justify-content-center align-self-center">
@@ -623,7 +662,7 @@
     </div>
     <div class="justify-content-center  panel slide-5">
       <div
-        class="bg-light-gray height-945px position-relative py-xl-5 customer_feature_section features3 lazy_loading">
+        class="bg-light-gray height-970px position-relative py-xl-5 customer_feature_section features3 lazy_loading">
         <div class="container-fluid h-100 min-vw-100">
           <div class="row h-100">
             <div class="col-lg-6 d-flex justify-content-center align-self-center">
@@ -675,7 +714,7 @@
     </div>
     <div class="justify-content-center  panel slide-6">
       <div
-        class="bg-light-gray height-945px position-relative py-xl-5 customer_feature_section features4 lazy_loading">
+        class="bg-light-gray height-970px position-relative py-xl-5 customer_feature_section features4 lazy_loading">
         <div class="container-fluid h-100 min-vw-100">
           <div class="row h-100">
             <div class="col-lg-6 d-flex justify-content-center align-self-center">
@@ -769,7 +808,7 @@
     </script>
   </div>
 
-    <section class="fav-brands height-945px min-sm-100vh min-vw-100 bg-white d-flex align-items-center brands_section mt-5 lazy_loading" id="brands">
+    <section class="fav-brands height-970px min-sm-100vh min-vw-100 bg-white d-flex align-items-center brands_section mt-5 lazy_loading" id="brands">
       <div class="container-fluid">
         <h5 class="text-center fav-brands-heading text-uppercase">browse your
           <span class="text-red">favorite</span> brands
