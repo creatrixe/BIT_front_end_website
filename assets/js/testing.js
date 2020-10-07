@@ -161,8 +161,8 @@ $(document).ready(function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    markers: true,
-                    start: () => '50px 20px',
+                    markers: false,
+                    start: () => 'top top',
                     end: () => section.offsetHeight+'top',
                     // end: () => '550px 0px',
                     // onUpdate: self => {
@@ -179,7 +179,7 @@ $(document).ready(function () {
                     ease: "none"
                 },
             });
-            console.log(section.offsetHeight);
+            // console.log(section.offsetHeight);
             $('.Desktop_comparison_section .comparisonImage').height(section.offsetHeight)
             // console.log(section.offsetHeight)
             // animate the container one way...
@@ -210,7 +210,7 @@ $(document).ready(function () {
         //           y: -100,
         //         }, {
         //             y: 0,
-        //         ease: Linear.easeNone
+        //         ease: Expo.easeInOut
         //       },0);
 
         //     // create scene to pin and link animation
@@ -295,11 +295,12 @@ $(document).ready(function () {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    start: "top top",
+                    start: "top 80px",
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
                     end: () => "+=" + section.offsetHeight,
                     scrub: true,
                     pin: false,
+                    markers: false,
                     anticipatePin: 1
                 },
                 defaults: {

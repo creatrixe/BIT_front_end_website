@@ -1548,8 +1548,8 @@ html.no-scroll {
     width: 375px !important;
 } */
 
-.height-945px {
-    height: 945px;
+.height-970px {
+    height: 970px;
     /* height: calc(625px + (945 - 625) * ((100vw - 1024px) / (1920 - 1024))); */
 }
 
@@ -1562,22 +1562,24 @@ html.no-scroll {
 }
 
 @media (max-width:1400px) and (min-width:992px) {
-    .height-945px {
-        height: 625px !important;
+    .height-970px {
+        height: 675px !important;
+        /* margin-top: 86px !important; */
     }
 
     .test_div {
-        height: 1250px;
+        height: 1350px;
     }
 
     .height-760px {
-        height: 760px;
+        height: 100vh;
     }
 }
 
 @media (max-width:991px) {
-    .height-945px {
-        height: 100vh !important;
+    .height-970px {
+        height: 100vh;
+        min-height: 100vh !important;
     }
 
     .height-760px {
@@ -1585,31 +1587,19 @@ html.no-scroll {
     }
 
     .h-sm-auto,
-    .fav-brands.height-945px {
+    .fav-brands.height-970px {
         height: auto !important;
     }
 
     .customer_feature_section #features {
         height: 600px;
     }
-}
 
-@media (max-width:991px) {
-    .height-945px {
-        height: 100vh !important;
+    .mobile-min-50vh {
+        min-height: 50vh;
     }
-
-    .height-760px {
-        height: 760px;
-    }
-
-    .h-sm-auto,
-    .fav-brands.height-945px {
-        height: auto !important;
-    }
-
-    .customer_feature_section #features {
-        height: 600px;
+    .min-vh-150 {
+        min-height: 150vh;
     }
 }
 
@@ -1617,4 +1607,12 @@ html.no-scroll {
     .main_nav_bar.customer_navbar {
         background-color: white !important;
     }
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.pt-86px {
+    padding-top: 86px;
 }

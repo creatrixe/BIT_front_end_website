@@ -16,13 +16,13 @@ $(document).ready(function () {
         }, {
           alpha: "1",
 
-          ease: Linear.easeNone,
+          ease: Expo.easeInOut,
         },"+=.2")
         .fromTo("#how_works3", .5, {
           alpha: "0"
         }, {
           alpha: "1",
-          ease: Linear.easeNone
+          ease: Expo.easeInOut
         },"+=.2")
 
 
@@ -33,19 +33,19 @@ $(document).ready(function () {
             alpha: "0"
           }, {
             alpha: "1",
-            ease: Linear.easeNone
+            ease: Expo.easeInOut
           },"+=.2")
           .fromTo("#features3", .5, {
             alpha: "0"
           }, {
             alpha: "1",
-            ease: Linear.easeNone
+            ease: Expo.easeInOut
           },"+=.2")
           .fromTo("#features4", .5, {
             alpha: "0"
           }, {
             alpha: "1",
-            ease: Linear.easeNone
+            ease: Expo.easeInOut
           },"+=.2")
 
 
