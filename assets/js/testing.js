@@ -162,8 +162,8 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: false,
-                    start: () => 'top top',
-                    end: () => section.offsetHeight+'top',
+                    start: () => '50px 0px',
+                    end: () => section.offsetHeight+50+'top',
                     // end: () => '550px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
@@ -253,9 +253,10 @@ $(document).ready(function () {
                 scrollTrigger: {
                     trigger: section,
                     markers: false,
-                    start: "0px 10px",
+                    start: "-30px top",
                     // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: "500px 0px",
+                    end: () => section.offsetHeight-30+'top',
+                    // end: "500px 0px",
                     onUpdate: self => {
                         // if(self.progress==1){
                         //     console.log('complete')
