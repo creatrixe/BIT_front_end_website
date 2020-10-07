@@ -210,7 +210,7 @@ $(document).ready(function () {
         //           y: -100,
         //         }, {
         //             y: 0,
-        //         ease: Linear.easeNone
+        //         ease: Expo.easeInOut
         //       },0);
 
         //     // create scene to pin and link animation
