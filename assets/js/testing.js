@@ -305,7 +305,7 @@ $(document).ready(function () {
                     // end: () => "+=" + section.offsetHeight,
                     scrub: true,
                     pin: false,
-                    markers: true,
+                    markers: false,
                     anticipatePin: 1
                 },
                 defaults: {
