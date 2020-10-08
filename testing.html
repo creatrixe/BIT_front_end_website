@@ -141,10 +141,10 @@
 
   <!-- moving phone -->
   <div
-    class="col-lg-6 d-flex justify-content-lg-center justify-content-end align-items-start test_div position-absolute right-0 left-0 ml-auto">
+    class="col-lg-6 d-none d-lg-flex justify-content-lg-center justify-content-end align-items-start test_div position-absolute right-0 left-0 ml-auto">
     <div class="position-sticky top-0 z-1 check_div">
       <div class="align-items-end d-flex ml-lg-auto mr-lg-0 mr-xl-5 mx-auto mx-xl-auto mx-xxl-auto height-760px">
-        <section class="comparisonSection Desktop_comparison_section d-none mb-5 mb-lg-0 mb-xl-5 d-lg-block">
+        <section class="comparisonSection Desktop_comparison_section mb-5 mb-xl-5">
           <div class="comparisonImage beforeImage">
             <img src="assets/img/mockup/hero_phone.svg" alt="mobile mockup" class="img-fluid _hero_section_img">
           </div>
@@ -169,7 +169,7 @@
             <p class="color-light-black col-md-10 col-xxl-9 px-0">
               Receive rewards, loyalty points and special offers from your favourite brands.
             </p>
-            <form class="form-inline hero_email_joining position-relative col-xl-9 pl-0"
+            <form class="form-inline hero_email_joining position-relative col-xl-9 col-md-10 col-lg pl-0 z-2"
               onsubmit="SubForm(); return false;" method="post" id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form">
               <input type="email" value="" name="EMAIL" id="mce-EMAIL" required
@@ -206,13 +206,14 @@
     </div>
   </section>
 
-  <section class="mobile_only_section position-relative d-lg-none" style="margin-top: -50vh;">
+  <!-- mobile view moving phone -->
+  <section class="mobile_only_section position-relative d-lg-none" style="margin-top: -342px;">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xl-6 min-vh-100">
+        <div class="col-xl-6 height-970px">
           <div class="col mobile_view_image hero_phone_bg position-relative">
             <!-- <img src="assets/img/mockup/hero_mobile_mockup.png" alt="hero section image" class="img-fluid hero_Mobile_img h-100"> -->
-            <div class="mobile_1st_section position-absolute d-lg-none left-0 right-0 min-200vh">
+            <div class="mobile_1st_section position-absolute d-lg-none left-0 right-0 mobile_div">
               <div class="position-sticky top-0 z-1 pt-86px">
                 <div class="align-items-center d-flex justify-content-center mx-auto">
                   <section class="comparisonSection my-5 Mobile_comparison_section">
@@ -230,7 +231,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-6 bg-gradiant-black min-vh-100 position-relative">
+        <div class="col-xl-6 bg-gradiant-black height-970px position-relative">
           <div class="red_border position-absolute right-0 top-0 col-md-6 mx-auto text-danger">
             <span class="col-xl-6 col-xxl-5 d-flex justify-content-center mx-auto shadow-lg"></span>
           </div>
@@ -539,11 +540,11 @@
   </div>
   <div class="col-lg-6 ml-auto check_opacity opacity-0" id="check_opacity" >
     <div
-      class="last_mobile_section justify-content-lg-center justify-content-end position-relative align-items-start ml-auto">
+      class="last_mobile_section d-none d-lg-block justify-content-lg-center justify-content-end position-relative align-items-start ml-auto">
       <div style="margin-top: -940px;min-height: 1890px;" class="next_section_mobile position-absolute right-0 left-0  min ">
         <div class="position-sticky top-0 z-1">
           <div class="align-items-center justify-content-center d-flex height-970px">
-            <section class="comparisonSection next_mobile_comparison_section d-none d-lg-block mt-lg-auto mt-xl-0">
+            <section class="comparisonSection next_mobile_comparison_section mt-xl-0">
               <div class="comparisonImage beforeImage">
                 <img src="assets/img/mockup/how_works_3.svg" alt="mobile mockup" class="img-fluid">
               </div>

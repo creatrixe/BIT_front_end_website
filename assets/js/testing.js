@@ -114,56 +114,55 @@ $(document).ready(function () {
 
     // main image scroll
 
-    if ($('div').hasClass('check_div')) {
-        gsap.utils.toArray(".check_div").forEach(section => {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: () => section.offsetHeight,
-                    scrub: true,
-                    pin: false,
-                    anticipatePin: 1
-                },
-                defaults: {
-                    ease: "none"
-                },
-            });
-        });
-    }
+    // if ($('div').hasClass('check_div')) {
+    //     gsap.utils.toArray(".check_div").forEach(section => {
+    //         gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: section,
+    //                 start: "top top",
+    //                 // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+    //                 end: () => section.offsetHeight,
+    //                 scrub: true,
+    //                 pin: false,
+    //                 anticipatePin: 1
+    //             },
+    //             defaults: {
+    //                 ease: "none"
+    //             },
+    //         });
+    //     });
+    // }
 
     //   image scroll js
-    // var wv = $(window).width();
+    var wv = $(window).width();
+    var wh = $(window).height();
 
-    if ($('section').hasClass('Desktop_comparison_section')) {
+    if (($('section').hasClass('Desktop_comparison_section'))&& ($('.test_div').css('display').toLowerCase() == 'flex')) {
 
 
-        // var set_main_top = 285;
+        var set_main_top = 0;
 
-        // if (wv < 992) {
-        //     var DesktopsetPosition = "top top";
-        // }
-        // if (wv > 992 && wv <= 1024) {
-        //     var DesktopsetPosition = set_main_top - 60 + "px center";
-        // }
-        // if (wv > 1024 && wv <= 1280) {
-        //     var DesktopsetPosition = set_main_top - 70 + "px center";
-        // }
-        // if (wv > 1280 && wv <= 1600) {
-        //     var DesktopsetPosition = set_main_top - 60 + "px center";
-        // }
-        // if (wv > 1600) {
-        //     var DesktopsetPosition = set_main_top + "px center";
-        // }
+        if (wv <= 992) {
+            var DesktopsetPosition = "top top";
+        }
+        else if (wv > 992 && wv <= 1400) {
+            var set_main_top = 0;
+            var DesktopsetPosition = set_main_top + "px 0px";
+        }
+        else if (wv > 1400) {
+            var set_main_top = 50;
+            var DesktopsetPosition = set_main_top + "px 0px";
+        }
 
         gsap.utils.toArray(".Desktop_comparison_section").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
                     markers: false,
-                    start: () => '50px 0px',
-                    end: () => section.offsetHeight+50+'top',
+                    start: () => DesktopsetPosition,
+                    end: () => section.offsetHeight+set_main_top+'top',
+                    // start: () => '50px 0px',
+                    // end: () => section.offsetHeight+50+'top',
                     // end: () => '550px 0px',
                     // onUpdate: self => {
                     //     if(self.progress==1){
@@ -198,7 +197,7 @@ $(document).ready(function () {
                 }, 0);
         });
     }
-    if ($('section').hasClass('next_mobile_comparison_section')) {
+    if (($('section').hasClass('next_mobile_comparison_section'))&& ($('.last_mobile_section').css('display').toLowerCase() == 'block')) {
 
         
         // $(function () { // wait for document ready
@@ -230,32 +229,28 @@ $(document).ready(function () {
         //   });
         
 
-        // var set_middle_top = 420
-
-        // if (wv < 992) {
-        //     var next_mobile_comparison_section_Position = "top top";
-        // }
-        // if (wv > 992 && wv <= 1024) {
-        //     var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
-        // }
-        // if (wv > 1024 && wv <= 1280) {
-        //     var next_mobile_comparison_section_Position = set_middle_top - 160 + "px center";
-        // }
-        // if (wv > 1280 && wv <= 1600) {
-        //     var next_mobile_comparison_section_Position = set_middle_top - 156 + "px center";
-        // }
-        // if (wv > 1600) {
-        //     var next_mobile_comparison_section_Position = set_middle_top + "px center";
-        // }
+        var set_middle_top = 0
+        if (wv <= 992) {
+            var next_mobile_comparison_section_Position = "top top";
+        }
+        else if (wv > 992 && wv <= 1400) {
+            var set_middle_top = 260;
+            var next_mobile_comparison_section_Position = set_middle_top + "px 0px";
+        }
+        else if (wv > 1400) {
+            var set_middle_top = -30;
+            var next_mobile_comparison_section_Position = set_middle_top + "px 0px";
+        }
 
         gsap.utils.toArray(".next_mobile_comparison_section").forEach(section => {
             tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
                     markers: false,
-                    start: "-30px top",
-                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: () => section.offsetHeight-30+'top',
+                    start: () => next_mobile_comparison_section_Position,
+                    end: () => section.offsetHeight+set_middle_top+'top',
+                    // start: "-30px top",
+                    // end: () => section.offsetHeight-30+'top',
                     // end: "500px 0px",
                     onUpdate: self => {
                         // if(self.progress==1){
@@ -290,18 +285,27 @@ $(document).ready(function () {
         });
     }
 
-    if ($('section').hasClass('Mobile_comparison_section')) {
+    if (($('section').hasClass('Mobile_comparison_section')) && ($('.mobile_1st_section').css('display').toLowerCase() == 'block')) {
+        if (wv <= 992) {
+            var set_mobile_top = -80;
+            var _mobile_comparison_section_Position = set_mobile_top + "px 0px";
+        }
+        if (wh > 768 && wh < 1025) {
+            var set_mobile_top = 165;
+            var _mobile_comparison_section_Position = set_mobile_top + "px 0px";
+        }
 
         gsap.utils.toArray(".Mobile_comparison_section").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 80px",
-                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-                    end: () => "+=" + section.offsetHeight,
+                    start: () => _mobile_comparison_section_Position,
+                    end: () => section.offsetHeight+set_mobile_top+'top',
+                    // start: "top 80px",
+                    // end: () => "+=" + section.offsetHeight,
                     scrub: true,
                     pin: false,
-                    markers: false,
+                    markers: true,
                     anticipatePin: 1
                 },
                 defaults: {
