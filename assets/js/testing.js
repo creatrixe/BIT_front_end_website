@@ -91,7 +91,7 @@ $(document).ready(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top - 86
-                    }, 1000, function () {
+                    }, 3000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -150,7 +150,7 @@ $(document).ready(function () {
             var DesktopsetPosition = set_main_top + "px 0px";
         }
         else if (wv > 1400) {
-            var set_main_top = 50;
+            var set_main_top = 0;
             var DesktopsetPosition = set_main_top + "px 0px";
         }
 
@@ -234,11 +234,11 @@ $(document).ready(function () {
             var next_mobile_comparison_section_Position = "top top";
         }
         else if (wv > 992 && wv <= 1400) {
-            var set_middle_top = 260;
+            var set_middle_top = 0;
             var next_mobile_comparison_section_Position = set_middle_top + "px 0px";
         }
         else if (wv > 1400) {
-            var set_middle_top = -30;
+            var set_middle_top = 0;
             var next_mobile_comparison_section_Position = set_middle_top + "px 0px";
         }
 
