@@ -334,7 +334,7 @@ body,
 .hero_phone_bg {
     background-image: url('../img/elements.svg');
     background-position-y: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     /* height: 100vh; */
 }
@@ -1550,8 +1550,13 @@ html.no-scroll {
 }
 
 @media (min-width:1401px) {
-    .test_div {
+    .test_div,
+    .height_1940 {
         height: 1940px;
+    }
+
+    .mt--970px {
+        margin-top: -970px;
     }
 
     .height-970px {
@@ -1559,12 +1564,12 @@ html.no-scroll {
         /* height: calc(625px + (945 - 625) * ((100vw - 1024px) / (1920 - 1024))); */
     }
 
-    .customer_how_works {
+    /* .customer_how_works {
         height: 100%;
-    }
+    } */
 
     .height-760px {
-        height: 760px;
+        height: 785px;
     }
 }
 
@@ -1574,11 +1579,16 @@ html.no-scroll {
         /* margin-top: 86px !important; */
     }
 
-    .customer_how_works {
-        height: 100%;
+    .mt--970px {
+        margin-top: -675px;
     }
 
-    .test_div {
+    /* .customer_how_works {
+        height: 100%;
+    } */
+
+    .test_div,
+    .height_1940 {
         height: 1350px;
     }
 
@@ -1661,4 +1671,8 @@ html.no-scroll {
 
 .pt-86px {
     padding-top: 86px;
+}
+
+.h-100vh {
+    height: 100vh !important;
 }
