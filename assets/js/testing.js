@@ -9,15 +9,15 @@ window.onbeforeunload = function () {
 
   $(window).scroll(function(){
     if ($(window).scrollTop() > 15) {
-        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
-        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
+        $('.main_nav_bar').addClass('shadow-lg bg-black transition-okay');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
+        $('.main_nav_bar .navbar-brand').addClass('size-100px transition-okay');
     } else {
-        $('.main_nav_bar').removeClass('shadow-lg bg-white');
+        $('.main_nav_bar').removeClass('shadow-lg bg-black');
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
-        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
+        $('.main_nav_bar .navbar-brand').removeClass('size-100px');
         if($(window).width()<=768) {
-            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
         }
     }
   })
@@ -28,7 +28,7 @@ $(document).ready(function () {
     }, 2000);
 
     if ($(window).width() <= 768) {
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
     }
 
     $('.lazy_loading').Lazy({
@@ -74,8 +74,8 @@ $(document).ready(function () {
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
+//        .not('[href="#"]')
+//        .not('[href="#0"]')
         .click(function (event) {
             // On-page links
             if (
@@ -91,7 +91,7 @@ $(document).ready(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top - 86
-                    }, 3000, function () {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);

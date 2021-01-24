@@ -1,3 +1,7 @@
+body {
+    background: black;
+}
+
 body,
 .font-regular {
     font-family: 'ITCAvantGardeStdBk';
@@ -13,6 +17,12 @@ body,
 
 .font-demi {
     font-family: 'ITCAvantGardeStdDemi';
+}
+
+.font-wandrpass {
+    font-family: 'Yellowtail-Regular';
+    letter-spacing: 5px;
+    word-spacing: 20px;
 }
 
 .z-1 {
@@ -42,6 +52,10 @@ body,
 
 .line-height-initial {
     line-height: 1.2;
+}
+
+.line-height-overlay {
+    margin-top: calc(-29px + (-30) * ((100vw - 300px) / (1920 - 300)));
 }
 
 .font-60 {
@@ -78,6 +92,18 @@ body,
     color: #C43438 !important;
 }
 
+.text-gray {
+    color: #C43438 !important;
+}
+
+.text-blue {
+    color: #00E6E3 !important;
+}
+
+.text-light-gray {
+    color: #D9D9D9 !important;
+}
+
 .border-red {
     border-color: #C43438;
 }
@@ -92,6 +118,10 @@ body,
 
 .bg-gradiant-red {
     background: linear-gradient(90deg, rgba(201, 50, 55, 1) 0%, rgba(126, 21, 24, 1) 100%);
+}
+
+.bg-blue {
+    background: #00E6E3;
 }
 
 .bg-gradiant-black {
@@ -149,6 +179,14 @@ body,
 
 .min-width-350px {
     min-width: 350px;
+}
+
+.btn-sign-up {
+    width: 100px !important;
+    background: #00E6E3;
+    position: absolute;
+    padding: 5px;
+    bottom: 8px;
 }
 
 .hero_email_joining .btn-join-list {
@@ -330,13 +368,34 @@ body,
     height: 100vh;
 }
 
-.how_works_iphone_bg,
-.hero_phone_bg {
+.how_works_iphone_bg {
     background-image: url('../img/elements.svg');
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
     /* height: 100vh; */
+}
+
+.hero_section {
+    background-image: url('../img/backgrounds/hero_section.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+
+.customer_how_works {
+    background-image: url('../img/backgrounds/customer_how_works.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.customer_feature_section {
+    background-image: url('../img/backgrounds/customer_feature_section.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media (max-width:1279px) {
@@ -803,6 +862,10 @@ body,
 
 .mb-20per {
     margin-bottom: 20%;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }
 
 .red_border span {
@@ -1402,7 +1465,7 @@ p {
     transition: margin .5s linear;
     /* border: 1px solid #808080; */
     border-radius: 0;
-    background: linear-gradient(90deg, rgba(201, 50, 55, 1) 0%, rgba(126, 21, 24, 1) 100%);
+    background: linear-gradient(90deg, #00e6e3 0%, #008a88 100%);
     border-radius: 30px;
     height: 85%;
     left: 3px;
@@ -1435,7 +1498,7 @@ p {
 
 .toggle-label input[type=checkbox]+.back .label.off,
 .toggle-label input[type=checkbox]:checked+.back .label.on {
-    color: #C43438;
+    color: #000;
 }
 
 .toggle-label input[type=checkbox]:checked+.back .label.off,

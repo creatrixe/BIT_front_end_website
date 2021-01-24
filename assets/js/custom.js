@@ -18,7 +18,7 @@ if ($('div').hasClass('swiper-containerr')) {
 };
 
     if($(window).width()<=768) {
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
     }
 
     $('.lazy_loading').Lazy({
@@ -387,14 +387,14 @@ $(window).scroll(function () {
     // navbar scroll
     if ($(window).scrollTop() > 15) {
         $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
         $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
     } else {
         $('.main_nav_bar').removeClass('shadow-lg bg-white');
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
         $('.main_nav_bar .navbar-brand').removeClass('size-60px');
         if($(window).width()<=768) {
-            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
         }
     }
 });
