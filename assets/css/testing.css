@@ -41,6 +41,10 @@ body,
     color: white;
 }
 
+.text-orange {
+    color: #EF580D;
+}
+
 .text-black {
     color: #000000;
 }
@@ -93,7 +97,7 @@ body,
 }
 
 .text-gray {
-    color: #C43438 !important;
+    color: #444 !important;
 }
 
 .text-blue {
@@ -179,6 +183,17 @@ body,
 
 .min-width-350px {
     min-width: 350px;
+}
+
+.display-flex {
+    display: inline-flex !important;
+}
+
+.pricing_box {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    width: 175px;
 }
 
 .btn-sign-up {
@@ -273,10 +288,10 @@ body,
 
 .redCircle {
     width: 150px;
-    object-fit: contain;
+    z-index: 1;
     position: absolute;
-    bottom: -25px;
-    left: -80px;
+    bottom: -145px;
+/*    left: -75px;*/
 }
 
 .howItWorksElements {
@@ -307,6 +322,10 @@ body,
 
 .bottom-0 {
     bottom: 0;
+}
+
+.top-10 {
+    top: 10px;
 }
 
 .min-70vh {
@@ -370,6 +389,14 @@ body,
 
 .how_works_iphone_bg {
     background-image: url('../img/elements.svg');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+
+.pricing_section_bg {
+    background-image: url('../img/backgrounds/pricing_section.png');
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1426,6 +1453,12 @@ p {
     margin-top: 30% !important;
 }
 
+.win_win_desc {
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .toggle-label {
     position: relative;
     width: 300px;
@@ -1507,7 +1540,7 @@ p {
 .icon-bar {
     width: 22px;
     height: 2px;
-    background-color: #C43438;
+    background-color:#00E6E3;
     display: block;
     transition: all 0.2s;
     margin-top: 4px
@@ -1707,7 +1740,7 @@ html.no-scroll {
     }
 
     .main_nav_bar.customer_navbar {
-        background-color: white !important;
+        background-color: black!important;
     }
 }
 
