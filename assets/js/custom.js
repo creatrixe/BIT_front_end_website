@@ -52,9 +52,12 @@ if ($('div').hasClass('swiper-containerr')) {
     $(".back_img").hover(function () {
         $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
         $(this).children('.hover_visible').toggleClass("d-block");
-        $('.back_img_2').toggleClass('min-80vh');
+//        $('.back_img_2').toggleClass('min-70vh');
         $('.back_img_2').children('.always_visible').toggleClass("d-none");
         $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
+        
+        $(this).find('.core_heading_color').toggleClass('text-orange text-white');
+        $('.core_heading_color_2').toggleClass('text-orange text-white');
     });
 
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -386,13 +389,13 @@ $(window).scroll(function () {
 
     // navbar scroll
     if ($(window).scrollTop() > 15) {
-        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
+        $('.main_nav_bar').addClass('shadow-lg bg-black transition-okay');
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
-        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
+        $('.main_nav_bar .navbar-brand').addClass('size-100px transition-okay');
     } else {
-        $('.main_nav_bar').removeClass('shadow-lg bg-white');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
-        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
+        $('.main_nav_bar').removeClass('shadow-lg bg-black');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
+        $('.main_nav_bar .navbar-brand').removeClass('size-100px');
         if($(window).width()<=768) {
             $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
         }
@@ -403,30 +406,30 @@ $(window).scroll(function () {
     var Bscroll = $(window).scrollTop();
     // console.log(Bscroll);
     if (Bscroll <= 850) {
-        $('._1st_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._1st_how_business').removeClass('text-black').addClass('text-red');
+//        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
         $('._1st_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/ArrowRed.svg');
+        $('._1st_icon_business').attr('src', 'assets/img/how_works_business/download_active.png');
         $('._2nd_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_inactive.png');
         // console.log('active');
     } else if (Bscroll > 850 && Bscroll < 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-black').addClass('text-red');
+//        $('._1st_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._2nd_how_business').removeClass('text-black').addClass('text-red');
         $('._1st_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/arrowBlack.svg');
+        $('._1st_icon_business').attr('src', 'assets/img/how_works_business/download_inactive.png');
         $('._2nd_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/bagRed.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/paper_black.svg');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_active.png');
+        $('._3rd_icon_business').attr('src', 'assets/img/how_works_business/portal_inactive.png');
         // console.log('active');
     } else if (Bscroll >= 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/pageRed.svg');
+//        $('._1st_how_business').removeClass('text-red').addClass('text-black');
+//        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-black').addClass('text-red');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_inactive.png');
+        $('._3rd_icon_business').attr('src', 'assets/img/how_works_business/portal_active.png');
         // console.log('active');
     }
 });
