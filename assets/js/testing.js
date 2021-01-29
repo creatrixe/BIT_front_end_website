@@ -23,9 +23,9 @@ window.onbeforeunload = function () {
   })
 
 $(document).ready(function () {
-    setTimeout(() => {
-        $('div[data-scrollmagic-pin-spacer]').addClass('min-vh-100')
-    }, 2000);
+//    setTimeout(() => {
+//        $('div[data-scrollmagic-pin-spacer]').addClass('min-vh-100')
+//    }, 2000);
 
     if ($(window).width() <= 768) {
         $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');

@@ -675,6 +675,12 @@ body,
     }
 }
 
+@media (min-width: 1400px) {
+    .lazy_fix_update_later {
+        margin-top: calc(300px + 3rem - 10vh) !important;
+    }
+}
+
 .height-100vh {
     height: 100vh !important;
     min-height: 100vh !important;
