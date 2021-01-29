@@ -206,7 +206,7 @@ body,
 }
 
 .btn-sign-up {
-    width: 100px !important;
+    width: 130px !important;
     background: #00E6E3;
     position: absolute;
     padding: 5px;
@@ -324,10 +324,10 @@ body,
 }
 
 .redCircle {
-    width: 150px;
+    width: 5pc;
     z-index: 1;
     position: absolute;
-    bottom: -145px;
+    bottom: -4.9pc;
 /*    left: -75px;*/
 }
 
@@ -568,7 +568,7 @@ body,
 
 @media (max-width:787px) {
     .collapse.navbar-collapse.show {
-        background-color: #ffffff !important;
+        background-color: #000 !important;
     }
 }
 
@@ -642,6 +642,10 @@ body,
 }
 
 @media (max-width: 576px) {
+    .redCircle {
+        width: 3.5pc !important;
+    }
+    
     .how_works_side_img .main_img {
         height: auto;
     }
@@ -662,6 +666,12 @@ body,
 
     .how_works_inner_img {
         right: 34%;
+    }
+}
+
+@media (min-width: 992px) AND (max-width: 1400px) {
+    .cater_nav_bar {
+        height: 300px !important;
     }
 }
 
