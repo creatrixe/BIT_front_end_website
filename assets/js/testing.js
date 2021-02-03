@@ -528,6 +528,7 @@ function register($form) {
                 // It worked, carry on...
                 $('.waiting_list_joined').addClass('min-width-100p h-100');
                 $(".waiting_list_joined").html('Invitation list joined!');
+                $('.waiting_list_joined').prop('disabled', true);
             }
         }
     });
