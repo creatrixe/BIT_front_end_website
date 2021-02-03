@@ -858,40 +858,40 @@ function loading() {
     };
 }
 
-$(document).ready( function () {
-    // I only have one form on the page but you can be more specific if need be.
-    var $form = $('form');
+//$(document).ready( function () {
+//    // I only have one form on the page but you can be more specific if need be.
+//    var $form = $('form');
+//
+//    if ( $form.length > 0 ) {
+//        $('form button[type="submit"]').bind('click', function ( event ) {
+//            if ( event ) event.preventDefault();
+//            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+//            register($form);
+//        });
+//    }
+//});
 
-    if ( $form.length > 0 ) {
-        $('form button[type="submit"]').bind('click', function ( event ) {
-            if ( event ) event.preventDefault();
-            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-            register($form);
-        });
-    }
-});
-
-function register($form) {
-    $.ajax({
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        data: $form.serialize(),
-        cache       : false,
-        dataType    : 'json',
-        contentType: "application/json; charset=utf-8",
-        error       : function(err) {
-            alert("Could not connect to the registration server. Please try again later.");
-            console.log(err);
-        },
-        success     : function(data) {
-            if (data.result != "success") {
-                // Something went wrong, do something to notify the user. maybe alert(data.msg);
-                alert(data.msg);
-            } else {
-                // It worked, carry on...
-                $('.waiting_list_joined').addClass('min-width-100p h-100');
-                $(".waiting_list_joined").html('Invitation list joined!');
-            }
-        }
-    });
-}
+//function register($form) {
+//    $.ajax({
+//        type: $form.attr('method'),
+//        url: $form.attr('action'),
+//        data: $form.serialize(),
+//        cache       : false,
+//        dataType    : 'json',
+//        contentType: "application/json; charset=utf-8",
+//        error       : function(err) {
+//            alert("Could not connect to the registration server. Please try again later.");
+//            console.log(err);
+//        },
+//        success     : function(data) {
+//            if (data.result != "success") {
+//                // Something went wrong, do something to notify the user. maybe alert(data.msg);
+//                alert(data.msg);
+//            } else {
+//                // It worked, carry on...
+//                $('.waiting_list_joined').addClass('min-width-100p h-100');
+//                $(".waiting_list_joined").html('Invitation list joined!');
+//            }
+//        }
+//    });
+//}
