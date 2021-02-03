@@ -21,6 +21,9 @@ body,
 
 .font-wandrpass {
     font-family: 'Yellowtail-Regular';
+}
+
+.letter-spacing {
     letter-spacing: 5px;
     word-spacing: 20px;
 }
@@ -308,6 +311,8 @@ body,
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
+    margin-bottom: 100px;
 }
 
 .customer-insight-button:hover {
@@ -1738,12 +1743,12 @@ html.no-scroll {
 
 @media (max-width:1400px) and (min-width:992px) {
     .height-970px {
-        height: 675px;
+        height: 750px;
         /* margin-top: 86px !important; */
     }
 
     .mt--970px {
-        margin-top: -675px;
+        margin-top: -750px;
     }
 
     /* .customer_how_works {
@@ -1768,7 +1773,7 @@ html.no-scroll {
     }
 
     .height-970px {
-        height: 685px;
+        height: 750px;
         /* min-height: 100vh !important; */
     }
 
