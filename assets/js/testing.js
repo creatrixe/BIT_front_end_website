@@ -497,15 +497,19 @@ function loading() {
 
 $(document).ready( function () {
     // I only have one form on the page but you can be more specific if need be.
-    var $form = $('form');
-
-    if ( $form.length > 0 ) {
-        $('form button[type="submit"]').bind('click', function ( event ) {
-            if ( event ) event.preventDefault();
-            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-            register($form);
-        });
-    }
+    var $form1 = $('#mc-embedded-subscribe-form-1');
+    $('#mc-embedded-subscribe-1').bind('click', function ( event ) {
+        if ( event ) event.preventDefault();
+        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+        register($form1);
+    });
+    
+    var $form2 = $('#mc-embedded-subscribe-form-2');
+    $('#mc-embedded-subscribe-2').bind('click', function ( event ) {
+        if ( event ) event.preventDefault();
+        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+        register($form2);
+    });
 });
 
 function register($form) {
