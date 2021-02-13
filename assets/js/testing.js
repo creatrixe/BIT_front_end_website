@@ -496,7 +496,6 @@ function loading() {
 }
 
 $(document).ready( function () {
-    // I only have one form on the page but you can be more specific if need be.
     var $form1 = $('#mc-embedded-subscribe-form-1');
     $('#mc-embedded-subscribe-1').bind('click', function ( event ) {
         if ( event ) event.preventDefault();
