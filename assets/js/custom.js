@@ -859,12 +859,12 @@ function loading() {
 }
 
 $(document).ready( function () {
-    var $form1 = $('#mc-embedded-subscribe-form-1');
-    $('#mc-embedded-subscribe-1').bind('click', function ( event ) {
-        if ( event ) event.preventDefault();
-        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-        register($form1);
-    });
+//    var $form1 = $('#mc-embedded-subscribe-form-1');
+//    $('#mc-embedded-subscribe-1').bind('click', function ( event ) {
+//        if ( event ) event.preventDefault();
+//        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+//        register($form1);
+//    });
 
     var $form2 = $('#mc-embedded-subscribe-form-2');
     $('#mc-embedded-subscribe-2').bind('click', function ( event ) {
