@@ -75,6 +75,10 @@ body,
   font-size: 12px;
 }
 
+.font-22 {
+  font-size: 22px;
+}
+
 .font-40 {
   font-size: 40px;
 }
@@ -1375,9 +1379,12 @@ p {
 }
 
 .mt-6p {
-  margin-top: 5.5rem !important;
+  margin-top: 5rem !important;
 }
-
+.soon {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .toggle-label {
   position: relative;
   width: 300px;
