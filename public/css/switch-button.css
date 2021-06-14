@@ -1,0 +1,63 @@
+
+.switch-button {
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  will-change: transform;
+  z-index: 197 !important;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border: 1px solid white;
+  border-radius: 22px 22px 22px 22px !important;
+  margin-left: 2.5rem;
+}
+.switch-button-case {
+  display: inline-block;
+  background: none;
+  width: 49%;
+  height: 100%;
+  color: black;
+  position: relative;
+  border: none;
+  transition: 0.3s ease all;
+  padding-bottom: 1px;
+}
+.switch-button-case:hover {
+  color: grey;
+  cursor: pointer;
+}
+.switch-button-case:focus {
+  outline: none;
+}
+.switch-button .active-switch {
+  color: #151515;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.3s ease-out all;
+  border-radius: 22px 22px 22px 22px !important;
+  background: rgb(196,52,56);
+  background: linear-gradient(90deg, rgba(196,52,56,1) 0%, rgba(119,40,42,1) 100%, rgba(196,52,56,1) 100%);
+}
+.switch-button .active-case {
+  color: #151515;
+}
+
+.signature {
+  position: fixed;
+  font-family: sans-serif;
+  font-weight: 100;
+  bottom: 10px;
+  left: 0;
+  letter-spacing: 4px;
+  font-size: 10px;
+  width: 100vw;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,47 @@
+
+@font-face {
+    font-family: "Avant Garde Gothic";
+    src: url(avantgardegothic.woff) format('woff'),
+         url(avantgardegothic.woff2) format('woff2'),
+         url(avantgardegothic.eot) format('embedded-opentype'),
+         url(avantgardegothic.otf) format('opentype');
+}
+
+
+.color-light-black {
+    color: #575757!important;
+}
+.font-18 {
+    font-size: 18px !important;
+}
+.font-medium {
+    font-family: ITC Avant !important;
+    font-family: "Avant Garde Gothic", "Open Sans", Helvetica, Calibri, sans-serif !important;
+}
+.text-red {
+    color: rgb(196,52,56) !important;
+}
+.bg-red-gradient {
+    background: rgb(196,52,56);
+    background: linear-gradient(90deg, rgba(196,52,56,1) 0%, rgba(119,40,42,1) 100%, rgba(196,52,56,1) 100%);
+}
+.border-red {
+    border: 36px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);    
+    border-radius: 100% !important;
+}
+
+.archivo-font {
+    font-family: 'Archivo Black', sans-serif;
+}
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.right-0 {
+    right: 0px !important;
+}
+
+.overflowx-hidden {
+    overflow-x: hidden !important;
+}
