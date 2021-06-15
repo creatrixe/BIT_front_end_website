@@ -56,6 +56,13 @@ export default {
             switch: "CUSTOMER"
         }
     },
+
+    mounted() {
+        let recaptchaScript = document.createElement('script')
+        recaptchaScript.setAttribute('src', './js/js-bundle.js')
+        document.head.appendChild(recaptchaScript)     
+
+    }
 }
 </script>
 

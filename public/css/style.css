@@ -7,6 +7,28 @@
          url(avantgardegothic.otf) format('opentype');
 }
 
+body {
+    /* overflow-x: hidden; */
+}
+
+.hover-zoom {
+    transition: 0.3s;
+    /* animation: rotation 2s infinite linear; */
+}
+.hover-zoom:hover {
+    transform: scale(2);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg) ;
+    }
+    to {
+        transition: 0.3s;
+        transform: rotate(359deg) ;
+    }
+}
+
 
 .color-light-black {
     color: #575757!important;
@@ -44,4 +66,12 @@
 
 .overflowx-hidden {
     overflow-x: hidden !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.transition {
+    transition: 0.3s !important;
 }

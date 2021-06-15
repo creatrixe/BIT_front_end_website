@@ -77,13 +77,13 @@ function slideScroll() {
             if (!isAnimating) {
                 //scroll down go to next slide
                 if (delta <= 0 && (elemTop <= docViewTop + h/1.75) && !intoView && slide_no != 'slide-4') {
-                    $('body').css("overflow", "hidden")
+                    $('body').css("overflow-y", "hidden")
                     $([document.documentElement, document.body]).animate({ scrollTop: (elemTop) + 'px'}, 99)      
                     $('.nav').removeClass('hidden')
                     intoView = true
 
                 } else if (delta <= 0 && slide_no == 'slide-4' && intoView) {
-                    $('body').css("overflow", "auto")
+                    $('body').css("overflow-y", "auto")
                     $([document.documentElement, document.body]).animate({ scrollTop: (elemTop + h) + 'px'}, 99) 
                     $('.nav').addClass('hidden')
                     intoView = false     
@@ -95,13 +95,13 @@ function slideScroll() {
 
 
                 } else if (delta > 0 && (elemBottom + h/1.75 >= docViewBottom) && !intoView && slide_no == 'slide-4' ) {
-                    $('body').css("overflow", "hidden")
+                    $('body').css("overflow-y", "hidden")
                     $([document.documentElement, document.body]).animate({ scrollTop: (elemTop) + 'px'}, 99)      
                     $('.nav').removeClass('hidden')
                     intoView = true
 
                 } else if (delta > 0 && slide_no =='slide-1' && intoView) {
-                    $('body').css("overflow", "auto")
+                    $('body').css("overflow-y", "auto")
                     $([document.documentElement, document.body]).animate({ scrollTop: (elemTop - h) + 'px'}, 99) 
                     $('.nav').addClass('hidden')
                     intoView = false     
