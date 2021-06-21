@@ -1,15 +1,59 @@
 
-@font-face {
-    font-family: "Avant Garde Gothic";
-    src: url(avantgardegothic.woff) format('woff'),
-         url(avantgardegothic.woff2) format('woff2'),
-         url(avantgardegothic.eot) format('embedded-opentype'),
-         url(avantgardegothic.otf) format('opentype');
+body {
+    overflow-x: hidden;
 }
 
-body {
-    /* overflow-x: hidden; */
+.font-regular, body {
+    font-family: ITCAvantGardeStdBk !important
 }
+
+.font-bold {
+    font-family: ITCAvantGardeStdBold !important
+}
+
+.font-medium {
+    font-family: ITCAvantGardeStdMd !important
+}
+
+.font-demi {
+    font-family: ITCAvantGardeStdDemi !important
+}
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+.transition {
+    transition: 0.3s !important;
+}
+.h-100vh {
+    height: 100vh !important;
+}
+.h-50vh {
+    height: 50vh !important;
+}
+.h-75vh {
+    height: 75vh !important;
+}
+.bg-dark-gradient {    
+    background-color: #171717;
+    background: rgb(23,23,23);
+    background: linear-gradient(0deg, rgba(23,23,23,1) 0%, rgba(46,46,46,1) 32%, rgba(64,63,63,1) 100%);    
+}
+.heading-lg {
+    font-size: calc(23px + (80 - 23) * ((100vw - 300px)/ (1920 - 300)));
+}
+.heading-md {
+    font-size: calc(32px + (56 - 32) * ((100vw - 300px)/ (1920 - 300)));
+}
+.hidden {
+    visibility: hidden !important;
+}
+
+
+
+
+
+
+
 
 .hover-zoom {
     transition: 0.3s;
@@ -18,19 +62,14 @@ body {
 .hover-zoom:hover {
     transform: scale(2);
 }
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg) ;
-    }
-    to {
-        transition: 0.3s;
-        transform: rotate(359deg) ;
-    }
+.hover-screen-out {
+    transition: 0.3s;
+}
+.hover-screen-out:hover {
+    transform: translate(50px, -50px);
 }
 
-
-.color-light-black {
+.text-light-black {
     color: #575757!important;
 }
 .font-18 {
@@ -56,7 +95,12 @@ body {
 
 .archivo-font {
     font-family: 'Archivo Black', sans-serif;
+    /* font-family: "ITC Avant Garde Gothic"; */
 }
+.itc-font {
+    font-family: "ITC Avant Garde Gothic";
+}   
+
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
@@ -68,10 +112,37 @@ body {
     overflow-x: hidden !important;
 }
 
+.overflow-hidden {
+    overflow: hidden !important;
+}
 .shadow-lg {
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
 }
 
 .transition {
     transition: 0.3s !important;
+}
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.border-top-light {
+    border-top: 1px solid rgba(255, 255, 255, 0.125) !important;
+}
+.rounded-pill {
+    border-radius: 50px 50px 50px 50px !important;
+}
+.border-radius-22 {
+    border-radius: 22px !important;
+}
+
+@media screen and (max-width: 420px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
+    .w-sm-50 {
+        width: 50% !important;
+    }
+    .h-sm-75vh {
+        height: 75vh !important;
+    }
 }

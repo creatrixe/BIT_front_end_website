@@ -1,8 +1,8 @@
 .particle-network-animation {
-    height: 100vh;
-    background-color: #171717;
-    background: rgb(23,23,23);
-    background: linear-gradient(0deg, rgba(23,23,23,1) 0%, rgba(46,46,46,1) 32%, rgba(64,63,63,1) 100%);    
+    /* height: 50vh; */
+    /* background-color: #171717; */
+    /* background: rgb(23,23,23); */
+    /* background: linear-gradient(0deg, rgba(23,23,23,1) 0%, rgba(46,46,46,1) 32%, rgba(64,63,63,1) 100%);     */
 }
 
 .glow {

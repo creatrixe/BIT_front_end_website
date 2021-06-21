@@ -1,52 +1,73 @@
 <template>
-    <div class="container-fluid px-0 position-relative h-100">
-        <app-header @switch="tab = $event"></app-header>
-        <section v-if="tab == 'BUSINESS'">
-            <business-hero></business-hero>
-            <section-1></section-1>
-            <section-2></section-2>
-            <section-3></section-3>
-            <section-4></section-4>
-            <app-footer></app-footer>
+    <div id="app" class="container-fluid px-0 h-100">
+        <navbar />
+        <div class="w-100" :style="{ height: height + 'px' }"></div>
+        
+        <section v-if="tab == 'business'">
+            <business-banner />
+            <how-it-works />
+            <customer-retention />
+            <core-features-v2 />
+            <pricing-tag />
         </section>
-        <section v-else class="h-100">
-            <customer-section-1></customer-section-1>            
+        <section v-else>
+            <customer-banner />
+            <one-two-three />
+            <all-good-things />
+            <brands />
         </section>
+
+        <app-footer />
     </div>
 </template>
 
 <script>
-import AppFooter from './components/AppFooter.vue'
-import AppHeader from './components/AppHeader.vue'
-import BusinessHero from './components/business/Hero.vue'
-import Section1 from './components/business/Section1.vue'
-import Section2 from './components/business/Section2.vue'
-import Section3 from './components/business/Section3.vue'
-import Section4 from './components/business/Section4.vue'
-import CustomerSection1 from './components/customer/Section1.vue'
+import { mapGetters } from 'vuex'
+import AllGoodThings from './components/AllGoodThings.vue'
+import BusinessBanner from './components/banners/BusinessBanner.vue'
+import CustomerBanner from './components/banners/CustomerBanner.vue'
+import Brands from './components/Brands.vue'
+import CoreFeaturesV2 from './components/CoreFeaturesV2.vue'
+import CustomerRetention from './components/CustomerRetention.vue'
+import AppFooter from './components/Footer.vue'
+import HowItWorks from './components/HowItWorks.vue'
+import Navbar from './components/Navbar.vue'
+import OneTwoThree from './components/OneTwoThree.vue'
+import PricingTag from './components/PricingTag.vue'
 
 export default {
     name: 'App',
     components: {
-        AppHeader,
-        BusinessHero,
-        Section1,
-        Section2,
-        Section3,
-        Section4,
+        Navbar,
+        BusinessBanner,
+        HowItWorks,
+        CustomerRetention,
+        CoreFeaturesV2,
+        PricingTag,
         AppFooter,
-        CustomerSection1
+        CustomerBanner,
+        OneTwoThree,
+        AllGoodThings,
+        Brands,
     },
-
     data() {
         return {
-            tab: "BUSINESS"
+            height: 0        
         }
     },
 
-    mounted() {
-
+    computed: {
+        ...mapGetters ({
+            navbarHeight: "getNavbarHeight",
+            tab: "getTab"
+        })
     },
+    
+    watch: {
+        navbarHeight(height) {
+            this.height = height
+        }
+    },    
 
 }
 </script>

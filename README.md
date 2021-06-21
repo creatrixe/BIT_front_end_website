@@ -1,4 +1,4 @@
-# best_in_town
+# bit
 
 ## Project setup
 ```
