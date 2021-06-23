@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 pt-5 bg-light">
+    <div class="w-100 pt-5 bg-light" id="allgoodthings">
     <h1 class="w-100 text-center mt-3 pt-3 heading-md font-bold">Core features</h1>
     <div class="container">
         <div class="row text-center flex-nowrap px-4 px-md-4" style="overflow:auto">

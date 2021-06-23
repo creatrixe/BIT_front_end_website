@@ -1,16 +1,15 @@
 <template>
     <div class="row mx-0 position-relative py-5 bg-dark-gradient">
         <div class="col-md-1"></div>
-        <div class="col-md-5 align-self-center pr-5">
+        <div class="col-md-5 align-self-center pr-md-5">
             <h1 class="heading-md font-bold mb-5 text-white px-4 px-md-2 d-none d-md-block">As easy as one, <br> two and three!</h1>
             <h1 class="heading-md font-bold mb-5 text-white px-4 px-md-2 d-block d-md-none">Here's how the app works!</h1>
             <section 
-                class="mx-0 my-2"
-                :class="i > 0 ? 'd-none d-md-flex' : 'row'" 
+                class="mx-0 my-2 row"
                 v-for="(item, i) in list" :key="i"
                 @mouseenter="item.icon = item.icon2, item.color = 'text-red', image = item.image"
                 @mouseleave="item.icon = item.icon1, item.color = 'text-white'">
-                <div class="col-2  text-center px-0">
+                <div class="col-2 text-center px-0">
                     <img  :src="item.icon" width="50">
                     <div v-if="i < list.length - 1" class="w-100 text-center mt-3 d-none d-md-block">
                         <div class="d-inline-block" style="border-left:1px solid black; height:50px"></div>
@@ -20,10 +19,13 @@
                     <h4 class="font-weight-bold font-bold" :class="item.color">{{ item.title }}</h4>
                     <h5 class="font-regular text-light mb-md-5">{{ item.body }}</h5>
                 </div>
+                <div class="col-12 d-block d-md-none mt-4 mb-5 pb-4">
+                    <img :src="item.image" class="w-100" alt="">                    
+                </div>
             </section>                      
         </div>
 
-        <div class="col-md-6 px-0 position-relative overflow-hidden text-center">
+        <div class="col-md-6 px-0 position-relative overflow-hidden text-center d-none d-md-block">
             <particles-network class="h-100vh w-100 position-absolute" />
             <img :src="image" class="position-relative w-sm-100" style="z-index:10000; transform: scale(0.75)" alt="">
         </div>     

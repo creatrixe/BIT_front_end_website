@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 pt-5 px-4">
+    <div class="w-100 pt-5 px-4" id="brands">
       <h1 class="w-100 text-center pt-5 heading-md font-bold">Browse your <span class="text-red">Favourite</span> Brands</h1>
       <div class="box w-100 special features">
           <div class="row features-row justify-content-center">

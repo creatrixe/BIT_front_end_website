@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative transition" >
+    <div class="row mx-0 position-relative transition" id="howitworks" >
         <div class="col-md-6 px-0">
             <div class="row mx-0 position-relative">
                 <div class="col-md-6 col-7 px-0 bg-dark-gradient"
@@ -17,11 +17,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 align-self-center px-4 px-md-0">
+        <div class="col-md-5 col-6 align-self-center px-4 px-md-0">
             <h1 class="heading-lg font-bold ">A Loyalty program <span class="text-red">with a digital twist.</span></h1>            
             <h5 class="font-regular text-muted mb-5">Bring in customers, and keep them coming back for more with <br> the digital punch card.</h5>
             <input-field class="px-2" />
         </div>
+        <div class="col-md-1 d-none d-md-block"></div>
     </div>
 </template>
 

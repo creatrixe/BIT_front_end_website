@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative my-5 py-5">
+    <div class="row mx-0 position-relative my-5 py-5" id="pricing">
         <div class="col-1"></div>
         <div class="col-md-5 align-self-center pr-md-5 pr-2 pl-4">
             <h1 class="heading-md font-bold ">Get out of your store <br> and <span class="text-red">into their phones!</span></h1>

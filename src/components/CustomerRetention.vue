@@ -1,5 +1,6 @@
 <template>
-    <section class="w-100 px-0 mx-0 bg-img" 
+    <section class="w-100 px-0 mx-0 bg-img"
+        id="insightportal" 
         :style="{
             'background-image': `url(${customer_insight_bg})`
         }">

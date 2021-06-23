@@ -1,12 +1,15 @@
 <template>
     <div>
-        <header class="row mx-0 position-fixed w-100 px-1 transition" ref="navbar" :class="header_container" style="z-index:500000;">
+        <header id="v-header" class="row mx-0 position-fixed w-100 px-1 transition border" ref="navbar" :class="header_container" style="z-index:500000;">
             <section class="col-md-3 col-6 text-left text-md-center align-self-center">
                 <img :src="logo" :width="logo_width" alt="" class="transition">
             </section>
-            <section class="d-none d-md-block col-md-8 p-4 text-right">
+            <section class="d-none d-md-block border col-lg-9 col-md-9 p-4 text-right">
                 <div class="d-flex justify-content-end mx-0 align-items-center">
-                    <a v-for="(nav_link, i) in nav_links" :key="i" href="#" class="btn text-light-black font-regular mx-3">{{ nav_link.name }}</a>
+                    <a v-for="(nav_link, i) in nav_links" :key="i" 
+                        :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
+                        @click="scrollTo(nav_link.href)" href="javascript:void(0)" 
+                        class="btn text-light-black font-regular mx-2">{{ nav_link.name }}</a>
                     <switch-button class="flex-shrink-0" />          
                 </div>
             </section>
@@ -15,16 +18,17 @@
                 <nav :style="{width: sidenav_width + 'px'}" style="right:0px; top:0px;" class="position-fixed h-100vh bg-dark-gradient transition">
                     <div class="px-3">
                         <a href="javascript:void(0)" @click="sidenav_width = 0" class="btn btn-block text-left mdi mdi-close text-white p-3"></a>
-                        <a v-for="(nav_link, i) in nav_links" :key="i" href="#" class="btn btn-block text-light px-0 text-left text-light-black font-regular mx-3">{{ nav_link.name }}</a>
+                        <a v-for="(nav_link, i) in nav_links" :key="i"                         
+                        :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
+                        @click="scrollTo(nav_link.href), sidenav_width = 0" href="javascript:void(0)" 
+                        class="btn btn-block text-light px-0 text-left text-light-black font-regular mx-3">{{ nav_link.name }}</a>
                         <div class="w-100 divider border-top-light my-3"></div>
-                        <a href="javascript:void(0)" @click="setTab('customer')" :class="tab == 'customer' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Customer</a>
-                        <a href="javascript:void(0)" @click="setTab('business')" :class="tab == 'business' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Business</a>
+                        <a href="javascript:void(0)" @click="setTab('customer'), sidenav_width = 0, scrollTo('#howitworks')" :class="tab == 'customer' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Customer</a>
+                        <a href="javascript:void(0)" @click="setTab('business'), sidenav_width = 0, scrollTo('#howitworks')" :class="tab == 'business' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Business</a>
                     </div>
 
                 </nav>
-            </section>
-                        
-            <section class="col-md-1"></section>
+            </section>                        
         </header>
     </div>
 </template>
@@ -51,10 +55,11 @@ export default {
             logo_width: 100,
             header_container: "py-4",
             nav_links: [
-                { name: "How it Works", },
-                { name: "Insight Portal", },
-                { name: "Features", },
-                { name: "Pricing", },
+                { name: "How it Works", href: "#howitworks", type: "*" },
+                { name: "Insight Portal", href:"#insightportal", type: "business" },
+                { name: "Features", href: "#allgoodthings", type: "*" },
+                { name: "Brands", href: "#brands", type: "customer" },
+                { name: "Pricing", href:"#pricing", type: "business"},
             ],
             scrolled: false,
             navbar: null,
@@ -88,6 +93,11 @@ export default {
             setNavbarHeight: "setNavbarHeight",
             setTab: "setTab"
         }),
+        scrollTo(hash) {
+            $([document.documentElement, document.body]).animate({
+                'scrollTop': $(hash).offset().top - this.navbar.outerHeight()/2
+            }, 999)                   
+        }        
     },
     mounted() {
 

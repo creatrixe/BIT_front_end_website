@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative transition" >
+    <div class="row mx-0 position-relative transition" id="howitworks" >
         <div class="col-md-1"></div>
         <div class="col-md-5 align-self-center px-4 px-md-2">
             <h1 class="heading-lg font-bold ">Shop local, <br> Support <span class="text-red">small</span></h1>            

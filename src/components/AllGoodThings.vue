@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative py-5 bg-light">
+    <div class="row mx-0 position-relative py-5 bg-light" id="allgoodthings">
         <div class="col-12">
             <h1 class="d-block d-md-none heading-md font-bold mb-5 text-black text-center">Key Features</h1>
 
@@ -11,16 +11,21 @@
                 <div v-for="(item, i) in list" :key="i" class="card bg-transparent my-md-5 my-4 border-0">
                     <div class="card-header bg-transparent border-0" :id="`heading${i}`">
                         <h5 class="mb-0">
-                            <div class="d-flex" data-toggle="collapse" :data-target="`#collapse${i}`" aria-expanded="true" :aria-controls="`collapse${i}`">
-                                <img  :src="item.icon" width="50px" class="align-self-start">
-                                <section>
-                                    <h4 class="font-weight-bold font-bold ml-4 pb-0 mb-0 cursor-pointer" :class="item.image == image ? 'text-red' : null"  @click="image = item.image">{{ item.title }}</h4>
-                                    <div :id="`collapse${i}`" class="collapse" :class="i == 1 ? 'show': ''" :aria-labelledby="`heading${i}`" data-parent="#accordion">
+                            <div class="row" data-toggle="collapse" :data-target="`#collapse${i}`" aria-expanded="true" :aria-controls="`collapse${i}`">
+                                <div class="col-md-2 col-3 text-right">
+                                    <img  :src="item.icon" class="w-100 align-self-start">
+                                </div>
+                                <section class="col-md-10 col-9 px-0">
+                                    <h4 class="font-weight-bold font-bold ml-md-4 ml-2 pb-0 mb-0 cursor-pointer" :class="item.image == image ? 'text-red' : null"  @click="image = item.image">{{ item.title }}</h4>
+                                    <div :aria-labelledby="`heading${i}`" data-parent="#accordion">
                                         <div class="card-body">
                                             <h5 class="font-regular text-muted">{{ item.body }}</h5>
                                         </div>
                                     </div>
                                 </section>
+                                <div class="col-md-12 d-block d-md-none mt-3 mb-5">
+                                    <img :src="item.image" class="w-100" alt="">
+                                </div>
                             </div>
                         </h5>
                     </div>
@@ -28,7 +33,7 @@
             </div>                                
         </div>
 
-        <div class="col-md-6 px-0 position-relative overflow-hidden text-center">
+        <div class="col-md-6 px-0 position-relative overflow-hidden text-center d-none d-md-block align-self-center">
             <particles-network netline_color="rgb(196,52,56)" :particles_color="['rgb(196,52,56)', 'rgba(0,0,0,0.50)']" class="h-100vh w-100 position-absolute" />
             <img :src="image" class="position-relative w-sm-100" style="z-index:10000; transform: scale(0.75)" alt="">
         </div>        
