@@ -63,10 +63,10 @@ body {
     transform: scale(2);
 }
 .hover-screen-out {
-    transition: 0.3s;
+    transition: 0.3s !important;
 }
-.hover-screen-out:hover {
-    transform: translate(50px, -50px);
+.hover-screen-out:hover .screen-out {
+    transform: translate(50px, -50px) !important;
 }
 
 .text-light-black {

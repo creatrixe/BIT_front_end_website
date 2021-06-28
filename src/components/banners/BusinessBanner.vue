@@ -11,9 +11,9 @@
                 <div class="col-12 position-absolute d-block d-md-none" style="bottom:19%;">
                     <img :src="laptop_all_in_one" class="w-100" alt="">
                 </div>
-                <div class="col-6 px-0 align-self-center position-relative w-100 d-none d-md-block" style="transform: translateY(100px)">
+                <div class="col-6 px-0 align-self-center position-relative w-100 d-none d-md-block hover-screen-out transition" style="transform: translateY(100px)">
                     <img :src="laptop" width="680px" alt="" class="position-absolute" style="bottom:-250px; left:-350px;">
-                    <img :src="screen" width="322px" alt="" class="position-absolute hover-screen-out" style="bottom:103px; left:-301px;">
+                    <img :src="screen" width="322px" alt="" class="position-absolute screen-out transition" style="bottom:103px; left:-301px;">
                 </div>
             </div>
         </div>

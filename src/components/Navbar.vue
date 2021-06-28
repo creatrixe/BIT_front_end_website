@@ -1,10 +1,12 @@
 <template>
     <div>
-        <header id="v-header" class="row mx-0 position-fixed w-100 px-1 transition border" ref="navbar" :class="header_container" style="z-index:500000;">
+        <header id="v-header" class="row mx-0 position-fixed w-100 px-1 transition" ref="navbar" :class="header_container" style="z-index:500000;">
             <section class="col-md-3 col-6 text-left text-md-center align-self-center">
-                <img :src="logo" :width="logo_width" alt="" class="transition">
+                <a href="/">
+                    <img :src="logo" :width="logo_width" alt="" class="transition">
+                </a>
             </section>
-            <section class="d-none d-md-block border col-lg-9 col-md-9 p-4 text-right">
+            <section class="d-none d-md-block col-lg-9 col-md-9 p-4 text-right">
                 <div class="d-flex justify-content-end mx-0 align-items-center">
                     <a v-for="(nav_link, i) in nav_links" :key="i" 
                         :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
