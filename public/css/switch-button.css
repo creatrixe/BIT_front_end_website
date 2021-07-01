@@ -4,6 +4,7 @@
   height: 35px;
   text-align: center;
   will-change: transform;
+  -webkit-will-change: transform;
   z-index: 197 !important;
   cursor: pointer;
   transition: 0.3s ease all;

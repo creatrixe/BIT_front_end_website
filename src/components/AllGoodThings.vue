@@ -12,10 +12,10 @@
                     <div class="card-header bg-transparent border-0" :id="`heading${i}`">
                         <h5 class="mb-0">
                             <div class="row" data-toggle="collapse" :data-target="`#collapse${i}`" aria-expanded="true" :aria-controls="`collapse${i}`">
-                                <div class="col-md-2 col-3 text-md-right text-center">
+                                <div class="col-md-2 col-4 text-md-right text-center">
                                     <img  :src="item.icon" :width="item.width" class="align-self-start">
                                 </div>
-                                <section class="col-md-10 col-9 px-4">
+                                <section class="col-md-10 col-8 px-0 px-md-5">
                                     <h4 class="font-weight-bold font-bold ml-md-4 ml-2 pb-0 mb-0 cursor-pointer" :class="item.image == image ? 'text-red' : null"  @click="image = item.image">{{ item.title }}</h4>
                                     <div v-if="(item.image == image && window_width > 600 || window_width < 600)" :aria-labelledby="`heading${i}`" data-parent="#accordion">
                                         <div class="card-body animate__animated animate__fadeInUp aniamte__faster">

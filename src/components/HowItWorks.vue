@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative my-5 py-5">
+    <div class="row mx-0 position-relative my-5 py-5" id="howitworks">
         <div class="col-md-1"></div>
         <div class="col-md-5 align-self-center pr-5">
             <h1 class="heading-md font-bold mb-5 text-black text-center text-md-left">How it works <br> for you</h1>

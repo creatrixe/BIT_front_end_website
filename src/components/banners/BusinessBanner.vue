@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative transition" id="howitworks" >
+    <div class="row mx-0 position-relative transition" id="top-banner">
         <div class="col-md-6 px-0">
             <div class="row mx-0 position-relative">
                 <div class="col-md-6 col-7 px-0 bg-dark-gradient"
@@ -9,15 +9,15 @@
                     <particles-network class="h-sm-75vh h-100vh" />
                 </div>
                 <div class="col-12 position-absolute d-block d-md-none" style="bottom:19%;">
-                    <img :src="laptop_all_in_one" class="w-100" alt="">
+                    <img :src="laptop_all_in_one" class="w-100" alt="Laptop All in one screen">
                 </div>
                 <div class="col-6 px-0 align-self-center position-relative w-100 d-none d-md-block hover-screen-out transition" style="transform: translateY(100px)">
-                    <img :src="laptop" width="680px" alt="" class="position-absolute" style="bottom:-250px; left:-350px;">
-                    <img :src="screen" width="322px" alt="" class="position-absolute screen-out transition" style="bottom:103px; left:-301px;">
+                    <img :src="laptop" width="680px" alt="Laptop Image" class="position-absolute" style="bottom:-250px; left:-350px;">
+                    <img :src="screen" width="322px" alt="Screen Image" class="position-absolute screen-out transition" style="bottom:103px; left:-301px;">
                 </div>
             </div>
         </div>
-        <div class="col-md-5 col-6 align-self-center px-4 px-md-0">
+        <div class="col-md-5 col-12 align-self-center px-4 px-md-4 bg-white ">
             <h1 class="heading-lg font-bold ">A Loyalty program <span class="text-red">with a digital twist.</span></h1>            
             <h5 class="font-regular text-muted mb-5">Bring in customers, and keep them coming back for more with <br> the digital punch card.</h5>
             <input-field class="px-2" />

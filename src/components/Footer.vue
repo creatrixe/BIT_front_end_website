@@ -3,7 +3,7 @@
         <section class="col-md-2 col-12 text-center order-0">
             <img :src="red_logo" :width="logo_width" alt="">
         </section>
-        <section class="col-md-7 col-12 mt-5 mt-md-0 order-md-2 order-1 text-center">
+        <section class="col-md-6 col-12 mt-5 mt-md-0 order-md-2 order-1 text-center">
             <div class="d-flex justify-content-center flex-wrap mx-0 align-items-center">
                 <a v-for="(nav_link, i) in nav_links" :key="i" 
                     :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
@@ -13,7 +13,7 @@
                 <a href="javascript:void(0)" class="btn text-light-black font-regular mx-0">Terms & Conditions</a>
             </div>
         </section>
-        <section class="col-md-3 col-12 text-right my-md-0 order-md-1 order-2">
+        <section class="col-md-4 col-12 text-left text-md-right my-md-0 order-md-1 order-2 ">
             <switch-button class="flex-shrink-0 mt-4 mt-md-0 border" />          
         </section>
         <div class="col-12 text-center order-3 mt-4">

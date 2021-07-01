@@ -6,12 +6,12 @@
                     <img :src="logo" :width="logo_width" alt="" class="transition">
                 </a>
             </section>
-            <section class="d-none d-md-block col-lg-9 col-md-9 p-4 text-right">
+            <section class="d-none d-md-block col-lg-9 col-md-9 py-4 pr-4 text-right">
                 <div class="d-flex justify-content-end mx-0 align-items-center">
                     <a v-for="(nav_link, i) in nav_links" :key="i" 
                         :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
                         @click="scrollTo(nav_link.href)" href="javascript:void(0)" 
-                        class="btn text-light-black font-regular mx-2">{{ nav_link.name }}</a>
+                        class="btn text-light-black font-regular mx-xl-3 mx-md-0">{{ nav_link.name }}</a>
                     <switch-button class="flex-shrink-0" />          
                 </div>
             </section>
@@ -23,10 +23,10 @@
                         <a v-for="(nav_link, i) in nav_links" :key="i"                         
                         :class="nav_link.type != '*' && nav_link.type != tab ? 'd-none' : null"
                         @click="scrollTo(nav_link.href), sidenav_width = 0" href="javascript:void(0)" 
-                        class="btn btn-block text-light px-0 text-left text-light-black font-regular mx-3">{{ nav_link.name }}</a>
+                        class="btn btn-block text-light px-0 text-left font-regular mx-3">{{ nav_link.name }}</a>
                         <div class="w-100 divider border-top-light my-3"></div>
-                        <a href="javascript:void(0)" @click="setTab('customer'), sidenav_width = 0, scrollTo('#howitworks')" :class="tab == 'customer' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Customer</a>
-                        <a href="javascript:void(0)" @click="setTab('business'), sidenav_width = 0, scrollTo('#howitworks')" :class="tab == 'business' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left text-light-black font-regular mx-3">Business</a>
+                        <a href="javascript:void(0)" @click="setTab('customer'), sidenav_width = 0, scrollTo('#top-banner')" :class="tab == 'customer' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left font-regular mx-3">Customer</a>
+                        <a href="javascript:void(0)" @click="setTab('business'), sidenav_width = 0, scrollTo('#top-banner')" :class="tab == 'business' ? 'text-red' : 'text-light'" class="btn btn-block px-0 text-left font-regular mx-3">Business</a>
                     </div>
 
                 </nav>
@@ -57,7 +57,8 @@ export default {
             logo_width: 100,
             header_container: "py-4",
             nav_links: [
-                { name: "How it Works", href: "#howitworks", type: "*" },
+                { name: "How it Works", href: "#howitworks", type: "customer" },
+                { name: "How it Works", href: "#howitworks", type: "business" },
                 { name: "Insight Portal", href:"#insightportal", type: "business" },
                 { name: "Features", href: "#allgoodthings", type: "*" },
                 { name: "Brands", href: "#brands", type: "customer" },

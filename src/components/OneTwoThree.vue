@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-0 position-relative py-5 bg-dark-gradient">
+    <div class="row mx-0 position-relative py-5 bg-dark-gradient"  id="howitworks">
         <div class="col-md-1"></div>
         <div class="col-md-5 align-self-center pr-md-5">
             <h1 class="heading-md font-bold mb-5 text-white px-4 px-md-2 d-none d-md-block">As easy as one, <br> two and three!</h1>
