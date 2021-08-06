@@ -1,27 +1,34 @@
 @font-face {
-    font-family: 'ITCAvantGardeStdBk-Book';
+    font-family: 'ITCAvantGardeStdBk';
     src: url('../fonts/ITCAvantGardeStdBk.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStdBk-Bold';
+    font-family: 'ITCAvantGardeStdBold';
     src: url('../fonts/ITCAvantGardeStdBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStdBk-Demi';
+    font-family: 'ITCAvantGardeStdDemi';
     src: url('../fonts/ITCAvantGardeStdDemi.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ITCAvantGardeStdBk-Medium';
+    font-family: 'ITCAvantGardeStdMd';
     src: url('../fonts/ITCAvantGardeStdMd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yellowtail-Regular';
+    src: url('../fonts/Yellowtail-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

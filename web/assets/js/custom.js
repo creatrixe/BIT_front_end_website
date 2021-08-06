@@ -1,13 +1,30 @@
 $(document).ready(function () {
 
+if ($('div').hasClass('swiper-containerr')) {
+    var mySwiper = new Swiper('.swiper-containerr', {
+        mousewheel: {
+            invert: false,
+            releaseOnEdges: true,
+        },
+        fadeEffect: {
+            crossFade: true
+        },
+        transitiondelay: 5000,
+        direction: 'vertical',
+        effect: 'fade',
+        autoHeight: true,
+        speed: 500,
+    });
+};
+
     if($(window).width()<=768) {
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
     }
 
     $('.lazy_loading').Lazy({
         // your configuration goes here
         scrollDirection: 'vertical',
-        effect: 'fadeIn',
+        effect: 'fade',
         visibleOnly: true,
         onError: function (element) {
             console.log('error loading ' + element.data('src'));
@@ -35,19 +52,22 @@ $(document).ready(function () {
     $(".back_img").hover(function () {
         $(this).children().children('.inner_div').toggleClass("shadow-lg bg-white border-radius-25px");
         $(this).children('.hover_visible').toggleClass("d-block");
-        $('.back_img_2').toggleClass('min-80vh');
+//        $('.back_img_2').toggleClass('min-70vh');
         $('.back_img_2').children('.always_visible').toggleClass("d-none");
         $('.back_img_2').children().children('.always_visible_text').toggleClass("shadow-lg bg-white border-radius-25px");
+        
+        $(this).find('.core_heading_color').toggleClass('text-orange text-white');
+        $('.core_heading_color_2').toggleClass('text-orange text-white');
     });
 
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    var emailaddressVal = $('#mce-EMAIL').val();
-    $('.waiting_list_joined').click(function () {
-        if (emailaddressVal != "" && !emailReg.test(emailaddressVal)) {
-            $('.waiting_list_joined').addClass('min-width-100p h-100');
-            $(".waiting_list_joined").html('Invitation list joined!');
-        }
-    });
+//    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+//    $('.waiting_list_joined').click(function () {
+//        var emailaddressVal = $('#mce-EMAIL').val();
+//        if (emailaddressVal != "" && emailReg.test(emailaddressVal)) {
+//            $('.waiting_list_joined').addClass('min-width-100p h-100');
+//            $(".waiting_list_joined").html('Invitation list joined!');
+//        }
+//    });
 
     // START smooth scrolling
     // Select all links with hashes
@@ -209,8 +229,9 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
+    var set_width = $(window).width();
     // console.log(scroll);
-    if (scroll <= 960) {
+    if (scroll <= 960 && set_width>1600) {
         $('._1st_how_customer').removeClass('text-white').addClass('text-red');
         $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
         $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
@@ -220,7 +241,7 @@ $(window).scroll(function () {
         $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
         $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works.svg');
         // console.log('active');
-    } else if (scroll > 960 && scroll < 1060) {
+    } else if (scroll > 960 && scroll < 1060 && set_width>1600) {
         $('._1st_how_customer').removeClass('text-red').addClass('text-white');
         $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
         $('._2nd_how_customer').removeClass('text-white').addClass('text-red');
@@ -232,7 +253,131 @@ $(window).scroll(function () {
         $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
         $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
         // console.log('active');
-    } else if (scroll >= 1060) {
+    } else if (scroll >= 1060 && set_width>1600) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/pageRed.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_3.svg');
+        // console.log('active');
+    }
+    if (scroll <= 550 && set_width>1280 && set_width<=1600) {
+        $('._1st_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/ArrowRed.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works.svg');
+        // console.log('active');
+    } else if (scroll > 550 && scroll < 760 && set_width>1280 && set_width<=1600) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/arrowWhite.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/bagRed.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/paper_white.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        // console.log('active');
+    } else if (scroll >= 760 && set_width>1280 && set_width<=1600) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/pageRed.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_3.svg');
+        // console.log('active');
+    }
+    if (scroll <= 560 && set_width>1024 && set_width<=1280) {
+        $('._1st_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/ArrowRed.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works.svg');
+        // console.log('active');
+    } else if (scroll > 560 && scroll < 700 && set_width>1024 && set_width<=1280) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/arrowWhite.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/bagRed.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/paper_white.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        // console.log('active');
+    } else if (scroll >= 700 && set_width>1024 && set_width<=1280) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/pageRed.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_3.svg');
+        // console.log('active');
+    }
+    if (scroll <= 540 && set_width>992 && set_width<=1024) {
+        $('._1st_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/ArrowRed.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works.svg');
+        // console.log('active');
+    } else if (scroll > 540 && scroll < 700 && set_width>992 && set_width<=1024) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/arrowWhite.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/bagRed.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/paper_white.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        // console.log('active');
+    } else if (scroll >= 700 && set_width>992 && set_width<=1024) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/pageRed.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_3.svg');
+        // console.log('active');
+    }
+    if (scroll <= 1840 && set_width<=992) {
+        $('._1st_how_customer').removeClass('text-white').addClass('text-red');
+        $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/ArrowRed.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/Scan QR icon_black.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works.svg');
+        // console.log('active');
+    } else if (scroll > 1840 && scroll < 1940 && set_width<=992) {
+        $('._1st_how_customer').removeClass('text-red').addClass('text-white');
+        $('._3rd_how_customer').removeClass('text-red').addClass('text-white');
+        $('._2nd_how_customer').removeClass('text-white').addClass('text-red');
+        $('._1st_line_customer').attr('src', 'assets/img/how-it-works-white-line.svg');
+        $('._1st_icon_customer').attr('src', 'assets/img/arrowWhite.svg');
+        $('._2nd_line_customer').attr('src', 'assets/img/how-it-works-red-line.svg');
+        $('._2nd_icon_customer').attr('src', 'assets/img/bagRed.svg');
+        $('._3rd_icon_customer').attr('src', 'assets/img/paper_white.svg');
+        $('.Desktop_comparison_section .afterImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        $('.next_mobile_comparison_section .beforeImage img').attr('src', 'assets/img/mockup/how_works_2.svg');
+        // console.log('active');
+    } else if (scroll >= 1940 && set_width<=992) {
         $('._1st_how_customer').removeClass('text-red').addClass('text-white');
         $('._2nd_how_customer').removeClass('text-red').addClass('text-white');
         $('._3rd_how_customer').removeClass('text-white').addClass('text-red');
@@ -244,15 +389,15 @@ $(window).scroll(function () {
 
     // navbar scroll
     if ($(window).scrollTop() > 15) {
-        $('.main_nav_bar').addClass('shadow-lg bg-white transition-okay');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
-        $('.main_nav_bar .navbar-brand').addClass('size-60px transition-okay');
+        $('.main_nav_bar').addClass('shadow-lg bg-black transition-okay');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
+        $('.main_nav_bar .navbar-brand').addClass('size-100px transition-okay');
     } else {
-        $('.main_nav_bar').removeClass('shadow-lg bg-white');
-        $('.main_nav_bar .business_logo').attr('src', 'assets/img/white_logo.svg');
-        $('.main_nav_bar .navbar-brand').removeClass('size-60px');
+        $('.main_nav_bar').removeClass('shadow-lg bg-black');
+        $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
+        $('.main_nav_bar .navbar-brand').removeClass('size-100px');
         if($(window).width()<=768) {
-            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.svg');
+            $('.main_nav_bar .business_logo').attr('src', 'assets/img/logo.png');
         }
     }
 });
@@ -261,30 +406,30 @@ $(window).scroll(function () {
     var Bscroll = $(window).scrollTop();
     // console.log(Bscroll);
     if (Bscroll <= 850) {
-        $('._1st_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._1st_how_business').removeClass('text-black').addClass('text-red');
+//        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
         $('._1st_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/ArrowRed.svg');
+        $('._1st_icon_business').attr('src', 'assets/img/how_works_business/download_active.png');
         $('._2nd_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_inactive.png');
         // console.log('active');
     } else if (Bscroll > 850 && Bscroll < 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-black').addClass('text-red');
+//        $('._1st_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._2nd_how_business').removeClass('text-black').addClass('text-red');
         $('._1st_line_business').attr('src', 'assets/img/how-it-works-black-line.svg');
-        $('._1st_icon_business').attr('src', 'assets/img/arrowBlack.svg');
+        $('._1st_icon_business').attr('src', 'assets/img/how_works_business/download_inactive.png');
         $('._2nd_line_business').attr('src', 'assets/img/how-it-works-red-line.svg');
-        $('._2nd_icon_business').attr('src', 'assets/img/bagRed.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/paper_black.svg');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_active.png');
+        $('._3rd_icon_business').attr('src', 'assets/img/how_works_business/portal_inactive.png');
         // console.log('active');
     } else if (Bscroll >= 1000) {
-        $('._1st_how_business').removeClass('text-red').addClass('text-black');
-        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
-        $('._3rd_how_business').removeClass('text-black').addClass('text-red');
-        $('._2nd_icon_business').attr('src', 'assets/img/Scan QR icon_black_circle.svg');
-        $('._3rd_icon_business').attr('src', 'assets/img/pageRed.svg');
+//        $('._1st_how_business').removeClass('text-red').addClass('text-black');
+//        $('._2nd_how_business').removeClass('text-red').addClass('text-black');
+//        $('._3rd_how_business').removeClass('text-black').addClass('text-red');
+        $('._2nd_icon_business').attr('src', 'assets/img/how_works_business/qr_inactive.png');
+        $('._3rd_icon_business').attr('src', 'assets/img/how_works_business/portal_active.png');
         // console.log('active');
     }
 });
@@ -394,19 +539,19 @@ $(document).ready(function () {
     if ($('section').hasClass('Desktop_comparison_section')) {
 
 
-        var set_main_top = 425
+        var set_main_top = 285;
 
         if (wv < 992) {
             var DesktopsetPosition = "top top";
         }
         if (wv > 992 && wv <= 1024) {
-            var DesktopsetPosition = set_main_top - 150 + "px center";
+            var DesktopsetPosition = set_main_top - 60 + "px center";
         }
-        if (wv > 1024 && wv < 1280) {
-            var DesktopsetPosition = set_main_top - 180 + "px center";
+        if (wv > 1024 && wv <= 1280) {
+            var DesktopsetPosition = set_main_top - 70 + "px center";
         }
-        if (wv > 1280 && wv < 1600) {
-            var DesktopsetPosition = set_main_top - 155 + "px center";
+        if (wv > 1280 && wv <= 1600) {
+            var DesktopsetPosition = set_main_top - 60 + "px center";
         }
         if (wv > 1600) {
             var DesktopsetPosition = set_main_top + "px center";
@@ -454,7 +599,7 @@ $(document).ready(function () {
     }
     if ($('section').hasClass('next_mobile_comparison_section')) {
 
-        var set_middle_top = 470
+        var set_middle_top = 420
 
         if (wv < 992) {
             var next_mobile_comparison_section_Position = "top top";
@@ -705,11 +850,59 @@ function loading() {
         setTimeout(function () {
             $('.loader span').html(num + '%');
 
-            if (num == 100) {
-                loading();
-            }
+            // if (num == 100) {
+                // loading();
+            // }
             num++;
-        }, i * 120);
+        }, i * 240);
     };
+}
 
+$(document).ready( function () {
+//    var $form1 = $('#mc-embedded-subscribe-form-1');
+//    $('#mc-embedded-subscribe-1').bind('click', function ( event ) {
+//        if ( event ) event.preventDefault();
+//        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+//        register($form1);
+//    });
+
+    var $form2 = $('#mc-embedded-subscribe-form-2');
+    $('#mc-embedded-subscribe-2').bind('click', function ( event ) {
+        if ( event ) event.preventDefault();
+        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+        register($form2);
+    });
+
+    var $form3 = $('#mc-embedded-subscribe-form-3');
+    $('#mc-embedded-subscribe-3').bind('click', function ( event ) {
+        if ( event ) event.preventDefault();
+        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+        register($form3);
+    });
+});
+
+function register($form) {
+    $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: $form.serialize(),
+        cache       : false,
+        dataType    : 'json',
+        contentType: "application/json; charset=utf-8",
+        error       : function(err) {
+            alert("Could not connect to the registration server. Please try again later.");
+            console.log(err);
+        },
+        success     : function(data) {
+            if (data.result != "success") {
+                // Something went wrong, do something to notify the user. maybe alert(data.msg);
+                alert(data.msg);
+            } else {
+                // It worked, carry on...
+                $('.waiting_list_joined').addClass('min-width-100p h-100');
+                $(".waiting_list_joined").html('Invitation list joined!');
+                $('.waiting_list_joined').prop('disabled', true);
+            }
+        }
+    });
 }
